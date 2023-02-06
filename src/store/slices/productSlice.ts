@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { Product } from "../../types/productTypes"
+import { IProduct } from "../../types/productTypes"
 
 interface ProductState{
-    products:Product[]
+    products:IProduct[]
 }
 
 const initialState:ProductState={

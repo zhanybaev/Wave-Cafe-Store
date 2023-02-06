@@ -1,24 +1,3 @@
 {
-  "products": [
-    {
-      "title": "Mercedes-Benz",
-      "price": "220000",
-      "id": 1
-    },
-    {
-      "title": "kok",
-      "price": "9",
-      "id": 2
-    },
-    {
-      "title": "koko",
-      "price": "90",
-      "id": 3
-    },
-    {
-      "title": "bmw",
-      "price": "999",
-      "id": 4
-    }
-  ]
+  "products": []
 }

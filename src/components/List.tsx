@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
 import { getAllProducts } from '../store/actions/product.action';
+import { IProduct } from '../types/productTypes';
+import Card from './Card';
 
 const List = () => {
     const products = useAppSelector(state=>state.product.products)
@@ -11,10 +13,8 @@ const List = () => {
 
     return (
         <div>
-            {products.map(item=>(
-                <div>
-                    {item.title}
-                </div>
+            {products.map((item) =>(
+                <Card item={item} />
             ))}
         </div>
     );

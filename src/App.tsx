@@ -1,12 +1,9 @@
-import React from 'react';
-import Add from './components/Add';
-import List from './components/List';
+import MainRoutes from './Routes';
 
 function App() {
   return (
     <div className="App">
-      <Add/>
-      <List/>
+      <MainRoutes/>
     </div>
   );
 }

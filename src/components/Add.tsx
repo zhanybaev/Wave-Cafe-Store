@@ -17,9 +17,9 @@ const Add = () => {
         setProduct(obj)
     }
 
-    const addProduct=()=>{
-        axios.post('http://localhost:8000/products', product);
-        getAllProducts(dispatch)
+    const addProduct=async()=>{
+        await axios.post('http://localhost:8000/products', product);
+        await getAllProducts(dispatch)
     }
     
     return (
