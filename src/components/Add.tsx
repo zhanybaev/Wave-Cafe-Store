@@ -1,12 +1,14 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { useAppDispatch } from '../store';
-import { getAllProducts } from '../store/actions/product.action';
+import { addProduct } from '../utils/functions';
 
 const Add = () => {
     const [product, setProduct] = useState({
+        id: useId(),
         title:'',
-        price:0
+        price:0,
+        image: '',
+        description:'',
     })
     const dispatch=useAppDispatch()
     const handleInp = (e:React.ChangeEvent<HTMLInputElement>)=>{
@@ -16,17 +18,14 @@ const Add = () => {
         }
         setProduct(obj)
     }
-
-    const addProduct=async()=>{
-        await axios.post('http://localhost:8000/products', product);
-        await getAllProducts(dispatch)
-    }
     
     return (
         <div>
             <input type="text" name='title' placeholder='title' onChange={handleInp} />
             <input type="number" name='price' placeholder='price' onChange={handleInp} />
-            <button onClick={addProduct} >add</button>
+            <input type="text" name='image' placeholder='image' onChange={handleInp} />
+            <input type="text" name='description' placeholder='description' onChange={handleInp} />
+            <button onClick={()=>addProduct(product, dispatch)} >add</button>
         </div>
     );
 };

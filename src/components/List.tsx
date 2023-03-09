@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
 import { getAllProducts } from '../store/actions/product.action';
-import { IProduct } from '../types/productTypes';
 import Card from './Card';
 
 const List = () => {
@@ -11,7 +10,7 @@ const List = () => {
         getAllProducts(dispatch)
     }, [])
 
-    return (
+    return ( 
         <div>
             {products.map((item) =>(
                 <Card item={item} />

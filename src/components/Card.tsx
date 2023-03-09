@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useAppDispatch } from '../store';
 import { IProduct } from '../types/productTypes';
+import { deleteProduct } from '../utils/functions';
 
 interface CardProps{
     item: IProduct;
 };
 
 const Card = (props:CardProps):JSX.Element => {
-    const { item } = props
+    const { item } = props;
+    const dispatch=useAppDispatch()
+
     return (
         <div key={item.id} className="product">
                     <Link to={`/detail/${item.id}`} style={{textDecoration:'none'}}>
@@ -20,7 +24,7 @@ const Card = (props:CardProps):JSX.Element => {
                         <p id="description">{item.description} <br />
                             {/* {currentUser?.email==='zhanybaev1211@gmail.com'?  */}
                                 {/* (<> */}
-                                    {/* <button className="btn" onClick={()=>deleteProduct(item.id)}>Delete</button> */}
+                                    <button className="btn" onClick={()=>deleteProduct(item.id, dispatch)}>Delete</button>
                                     <Link to={`/edit/${item.id}`} style={{textDecoration:'none'}}>
                                         <button className="btn">Edit</button>
                                     </Link>
