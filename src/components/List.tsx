@@ -13,7 +13,7 @@ const List = () => {
     return ( 
         <div>
             {products.map((item) =>(
-                <Card item={item} />
+                <Card key={item.id} item={item} />
             ))}
         </div>
     );

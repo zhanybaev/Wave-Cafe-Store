@@ -14,3 +14,8 @@ export const deleteProduct = async(id:string, dispatch:Dispatch)=>{
     await axios.delete(`${PRODUCTS_API}/${id}`)
     await getAllProducts(dispatch)
 }
+
+export const editProduct = async (id:string, updatedProduct:IProduct ,dispatch:Dispatch)=>{
+    await axios.patch(`${PRODUCTS_API}/${id}`, updatedProduct)
+    await getAllProducts(dispatch)
+}

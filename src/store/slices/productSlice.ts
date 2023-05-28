@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit"
 import { IProduct } from "../../types/productTypes"
 
 interface ProductState{
-    products:IProduct[]
+    products:IProduct[],
+    product:IProduct | null
 }
 
 const initialState:ProductState={
-    products:[]
+    products:[],
+    product:null
 }
 
 export const ProductSlice=createSlice({
@@ -18,8 +20,14 @@ export const ProductSlice=createSlice({
                 ...state, 
                 products: action.payload
             }
+        },
+        getProduct:(state, action)=>{
+            return {
+                ...state,
+                product: action.payload
+            }
         }
     }
 })
 export default ProductSlice.reducer;
-export const { getProducts }=ProductSlice.actions
+export const { getProducts, getProduct }=ProductSlice.actions
