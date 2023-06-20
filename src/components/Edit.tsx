@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../store';
 import { getOneProduct } from '../store/actions/product.action';
 import { IProduct } from '../types/productTypes';
@@ -9,32 +9,40 @@ const Edit = () => {
     const product = useAppSelector(state=>state.product.product)
     const { id } = useParams()
     const dispatch=useAppDispatch()
-    const [editedProduct, setEditedProduct]=useState<IProduct | null>(product);
-    
-    const handleInp = (e:React.ChangeEvent<HTMLInputElement>)=>{
-        const obj={
-            ...product,
-            [e.target.name]:e.target.value
+    const navigate = useNavigate()
+    const [editedProduct, setEditedProduct] = useState({
+        title:product.title,
+        price: product.price,
+        image: product.image,
+        description: product.description,
+    })
+
+    const saveEdited = (id:string) => {
+        const obj:IProduct = {
+            ...editedProduct,
+            id:id
         }
-        setEditedProduct(obj)
+        editProduct(id, obj, dispatch)
+        navigate('/list')
     }
 
-    console.log(product);
     useEffect(()=>{
         if(id){
             getOneProduct(dispatch, id)
         }
-    }, [])
+    }, [id])
+    
+    console.log(editedProduct);
 
     return (
         <div>
-            <input type="text" name='title' placeholder='title' onChange={handleInp} />
-            <input type="number" name='price' placeholder='price' onChange={handleInp} />
-            <input type="text" name='image' placeholder='image' onChange={handleInp} />
-            <input type="text" name='description' placeholder='description' onChange={handleInp} />
+            <input placeholder='title' value={editedProduct.title} onChange={(e)=>setEditedProduct({...editedProduct, title:e.target.value})} />
+            <input type="number" placeholder='price' value={editedProduct.price} onChange={(e)=>setEditedProduct({...editedProduct, price:+e.target.value})} />
+            <input placeholder='image' value={editedProduct.image} onChange={(e)=>setEditedProduct({...editedProduct, image:e.target.value})} />
+            <input placeholder='description' value={editedProduct.description} onChange={(e)=>setEditedProduct({...editedProduct, description:e.target.value})}/>
             <button onClick={()=>{
                 if(id){
-                    editProduct(id, editedProduct, dispatch)
+                    saveEdited(id)
                 }
             }} >Update</button>
         </div>

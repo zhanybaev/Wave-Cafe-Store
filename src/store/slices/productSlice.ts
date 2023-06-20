@@ -3,12 +3,18 @@ import { IProduct } from "../../types/productTypes"
 
 interface ProductState{
     products:IProduct[],
-    product:IProduct | null
+    product:IProduct
 }
 
 const initialState:ProductState={
     products:[],
-    product:null
+    product:{
+        title:'',
+        id: '',
+        image: '',
+        description:'',
+        price: 0
+    }
 }
 
 export const ProductSlice=createSlice({
