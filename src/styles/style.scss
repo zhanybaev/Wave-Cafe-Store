@@ -1,7 +1,14 @@
+@import 'consts';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 #background-video {
@@ -18,6 +25,20 @@
 
 main{
     padding: 30px;
+    display: flex;
+}
+
+.main__left{
+    width: 50%;
+}
+
+@media screen and (max-width: 992px){
+    main{
+        flex-direction: column;
+    }
+    .main__left{
+        width: 100%;
+    }
 }
 
 @import 'navbar';

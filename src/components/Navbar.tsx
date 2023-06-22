@@ -5,43 +5,46 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav>
-            <div>
-                <FontAwesomeIcon icon={faMugSaucer} />
-                Wave Cafe
-            </div>
+            <header>
+                <FontAwesomeIcon className="header__icon" icon={faMugSaucer} />
+                <h1>Wave Cafe</h1>
+            </header>
             <NavLink className='nav__item' to='/drink-menu'>
-                <FontAwesomeIcon icon={faMugHot} />
-                <div>   
+                <FontAwesomeIcon className="nav__icon" icon={faMugHot} />
+                <span>   
                     Drink Menu
-                </div>
+                </span>
             </NavLink>
             <NavLink className='nav__item' to='/about'>
-                <FontAwesomeIcon icon={faUsers} />
-                <div>
+                <FontAwesomeIcon className="nav__icon" icon={faUsers} />
+                <span>
                     About Us
-                </div>
+                </span>
             </NavLink>
             <NavLink className='nav__item' to="/special-menu">
-               <FontAwesomeIcon icon={faMartiniGlass} />
-                <div>
+               <FontAwesomeIcon className="nav__icon" icon={faMartiniGlass} />
+               <span>
                     Special Items
-                </div>
+                </span>
             </NavLink>
             <NavLink className='nav__item' to='/contact'>
-                <FontAwesomeIcon icon={faComments} />
-                <div>
+                <FontAwesomeIcon className="nav__icon" icon={faComments} />
+                <span>
                     Contact
-                </div>
+                </span>
             </NavLink>
             <NavLink className='nav__item' to="/cart">
-                <FontAwesomeIcon icon={faCartShopping} />
-                <div>
+                <FontAwesomeIcon className="nav__icon" icon={faCartShopping} />
+                <span>
                     Cart
-                </div>
+                </span>
             </NavLink>
-            <div>
-                Log in
-            </div>
+            <NavLink className='nav__item' to="/auth">
+                <FontAwesomeIcon className="nav__icon" icon={faCartShopping} />
+                <span>
+                    Login
+                </span>
+            </NavLink>
         </nav>
     );
 };

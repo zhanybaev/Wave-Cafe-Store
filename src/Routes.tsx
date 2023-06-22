@@ -8,7 +8,9 @@ import List from './pages/List/ListPage';
 const MainRoutes = ():JSX.Element => {
     return (
         <BrowserRouter>
-        <Navbar/>
+        <div className="main__left">
+            <Navbar/>
+        </div>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/list" element={<List/>} />
