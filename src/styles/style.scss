@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 a{
@@ -28,17 +29,30 @@ main{
     display: flex;
 }
 
-.main__left{
+.main__left, .main__right{
     width: 50%;
+}
+
+@media (max-width: 1130px) and (min-width: 992px){
+    .main__left{
+        width: 45%;
+    }
+    .main__right{
+        width: 55%;
+    }
 }
 
 @media screen and (max-width: 992px){
     main{
         flex-direction: column;
     }
-    .main__left{
+    .main__left, .main__right{
         width: 100%;
+    }
+    .main__left{
+        margin-bottom: 50px;
     }
 }
 
 @import 'navbar';
+@import 'about'

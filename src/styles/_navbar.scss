@@ -43,7 +43,6 @@ header h1{
 
 .nav__item span{
     font-size: 20.2px;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .nav__icon{
@@ -63,6 +62,11 @@ header h1{
     }
 }
 
+@media (max-width: 1130px) and (min-width: 992px){
+    nav{
+        max-width: 380px;
+    }
+}
 @media screen and (max-width: 992px){
     nav{
         flex-direction: row;
