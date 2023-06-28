@@ -250,7 +250,7 @@ header h1 {
 }
 
 .aboutUs__block2 {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.615);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,5 +304,111 @@ header h1 {
     margin-left: 0;
     font-size: 27px;
   }
+}
+
+@font-face {
+  font-family: 'EBCorp-Regular';
+  src: url(../assets/fonts/EBCorp-RegularOblique.ttf);
+}
+
+@font-face {
+  font-family: 'EBCorp-Medium';
+  src: url(../assets/fonts/EBCorp-MediumOblique.ttf);
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  max-width: 660px;
+}
+
+.contact__text {
+  padding: 45px 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.615);
+}
+
+.contact__text h2 {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #3CC;
+  font-size: 29px;
+  margin-bottom: 22.410px;
+}
+
+.contact__text p {
+  line-height: 32.4px;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.contact__form {
+  background: rgba(0, 0, 0, 0.615);
+  max-width: 460px;
+  padding: 40px 50px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.contact__form input, .contact__form textarea {
+  padding: 15px;
+  width: 100%;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16.5px;
+  line-height: 24px;
+  font-weight: 400;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+.contact__form input::-webkit-input-placeholder, .contact__form textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16.5px;
+}
+
+.contact__form input:-ms-input-placeholder, .contact__form textarea:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16.5px;
+}
+
+.contact__form input::-ms-input-placeholder, .contact__form textarea::-ms-input-placeholder {
+  color: #fff;
+  font-size: 16.5px;
+}
+
+.contact__form input::placeholder, .contact__form textarea::placeholder {
+  color: #fff;
+  font-size: 16.5px;
+}
+
+.contact__form input {
+  margin-bottom: 25px;
+}
+
+.contact__form button {
+  color: #099;
+  background: white;
+  padding: 12px 40px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 22.4px;
+  font-family: Arial;
+  border: 0;
+  margin-top: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+.contact__form button:hover {
+  color: white;
+  background: #099;
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 20px;
     h2{
-        color: #3CC;
+        color: $aqua;
         font-size: 29px;
         margin-bottom: 22.410px;
     }
@@ -23,7 +23,7 @@
 
 .aboutUs__block1{
     padding: 40px 30px 50px 0;
-    background: rgba(0,0,0,0.615);
+    background: $transparent;
     h2{
         margin-left: 220px;
     }
@@ -42,7 +42,7 @@
 }
 
 .aboutUs__block2{
-    background: rgba(0,0,0,0.6);
+    background: $transparent;
     display: flex;
     flex-direction: column;
     padding: 50px 40px 30px;

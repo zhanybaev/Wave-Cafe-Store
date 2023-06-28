@@ -1,0 +1,67 @@
+@import 'consts';
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 660px;
+}
+
+.contact__text{
+    padding: 45px 50px;
+    color: white;
+    background: $transparent;
+    h2{
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        color: $aqua;
+        font-size: 29px;
+        margin-bottom: 22.410px;
+    }
+    p{
+        line-height: 32.4px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+.contact__form{
+    background: $transparent;
+    max-width: 460px;
+    padding: 40px 50px;
+    align-self: end;
+    input, textarea{
+        padding: 15px;
+        width: 100%;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 16.5px;
+        line-height: 24px;
+        font-weight: 400;
+        background: transparent;
+        color: #fff;
+        border: 0;
+        border-bottom: 1px solid white;
+    }
+    input::placeholder, textarea::placeholder{
+        color: #fff;
+        font-size: 16.5px;
+    }
+    input{
+        margin-bottom: 25px;
+    }
+    button{
+        color: $green;
+        background: white;
+        padding: 12px 40px;
+        transition: all 0.3s ease;
+        font-size: 22.4px;
+        font-family: Arial;
+        border: 0;
+        margin-top: 30px;
+        float: right;
+        cursor: pointer;
+    }
+    button:hover{
+        color: white;
+        background: $green;
+    }
+}
