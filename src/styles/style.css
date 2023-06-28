@@ -88,6 +88,7 @@ nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
+  position: fixed;
 }
 
 header {
@@ -167,6 +168,7 @@ header h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    position: static;
   }
 }
 

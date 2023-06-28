@@ -6,6 +6,7 @@ nav{
     max-width: 500px;
     flex-wrap: wrap;
     gap: 20px;
+    position: fixed;
 }
 
 header{
@@ -70,6 +71,7 @@ header h1{
 @media screen and (max-width: 992px){
     nav{
         flex-direction: row;
+        position: static;
     }
 }
 
