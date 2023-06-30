@@ -140,7 +140,7 @@ header h1 {
   font-size: 25px;
 }
 
-.active, .nav__item:hover {
+nav .active, .nav__item:hover {
   background: #099;
   color: white;
   -webkit-transition: 0.5s;
@@ -412,5 +412,54 @@ header h1 {
 .contact__form button:hover {
   color: white;
   background: #099;
+}
+
+@font-face {
+  font-family: 'EBCorp-Regular';
+  src: url(../assets/fonts/EBCorp-RegularOblique.ttf);
+}
+
+@font-face {
+  font-family: 'EBCorp-Medium';
+  src: url(../assets/fonts/EBCorp-MediumOblique.ttf);
+}
+
+.filterBar {
+  background-color: rgba(0, 0, 0, 0.615);
+  height: 80px;
+  color: white;
+}
+
+.filterBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.filterBar ul li.active {
+  color: #96FEFF;
+  border-bottom: 4px solid #96FEFF;
+}
+
+.filterBar li {
+  font-size: 20.2px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid transparent;
+}
+
+.filterBar li:hover {
+  color: #96FEFF;
+  border-bottom: 4px solid #96FEFF;
 }
 /*# sourceMappingURL=style.css.map */

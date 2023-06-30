@@ -1,0 +1,30 @@
+@import 'consts';
+
+.filterBar{
+    background-color: $transparent;
+    height: 80px;
+    color: white;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        list-style-type: none;
+        li.active{
+            color: #96FEFF;
+            border-bottom: 4px solid #96FEFF;
+        }
+    }
+    li{
+        font-size: 20.2px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        border-bottom: 4px solid transparent;
+    }
+    li:hover{
+        color: #96FEFF;
+        border-bottom: 4px solid #96FEFF;
+    }
+}

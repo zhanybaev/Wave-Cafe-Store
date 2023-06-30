@@ -9,7 +9,7 @@ const Navbar = () => {
                 <FontAwesomeIcon className="header__icon" icon={faMugSaucer} />
                 <h1>Wave Cafe</h1>
             </header>
-            <NavLink className='nav__item' to='/drink-menu'>
+            <NavLink className='nav__item' to='/'>
                 <FontAwesomeIcon className="nav__icon" icon={faMugHot} />
                 <span>   
                     Drink Menu

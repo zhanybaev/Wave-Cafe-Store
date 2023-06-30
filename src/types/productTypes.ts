@@ -3,7 +3,8 @@ export interface IProduct{
     title: string;
     image: string,
     description:string,
-    price: number
+    price: number,
+    type: string
 }
 
 export interface IEmailData{

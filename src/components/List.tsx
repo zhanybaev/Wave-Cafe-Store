@@ -1,13 +1,18 @@
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../store';
+import { useAppDispatch } from '../store';
 import { getAllProducts } from '../store/actions/product.action';
 import Card from './Card';
+import { IProduct } from '../types/productTypes';
 
-const List = () => {
-    const products = useAppSelector(state=>state.product.products)
+interface IListProps{
+    products: IProduct[],
+    API:string
+}
+
+const List = ({products, API}:IListProps) => {
     const dispatch=useAppDispatch()
     useEffect(()=>{
-        getAllProducts(dispatch)
+        getAllProducts(dispatch, API)
     }, [])
 
     return ( 

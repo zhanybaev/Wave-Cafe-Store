@@ -2,7 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../store';
 import { IProduct } from '../types/productTypes';
 import { deleteProduct } from '../utils/functions';
-import { getOneProduct } from '../store/actions/product.action';
+// import { getOneProduct } from '../store/actions/product.action';
+import { DRINKS_API } from '../utils/consts';
 
 interface CardProps{
     item: IProduct;
@@ -31,7 +32,7 @@ const Card = (props:CardProps):JSX.Element => {
                         <p id="description">{item.description} <br />
                             {/* {currentUser?.email==='zhanybaev1211@gmail.com'?  */}
                                 {/* (<> */}
-                                    <button className="btn" onClick={()=>deleteProduct(item.id, dispatch)}>Delete</button>
+                                    <button className="btn" onClick={()=>deleteProduct(item.id, DRINKS_API, dispatch)}>Delete</button>
                                     <button className="btn" onClick={()=>goToEdit(item.id)} >Edit</button>
                                 {/* </>): */}
                                 {/* <></> */}

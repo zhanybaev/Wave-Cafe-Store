@@ -51,7 +51,7 @@ header h1{
     font-size: 25px;
 }
 
-.active, .nav__item:hover{
+nav .active, .nav__item:hover{
     background: $green;
     color: white;
     transition: 0.5s;

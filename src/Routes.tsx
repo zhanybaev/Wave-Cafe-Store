@@ -2,10 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Edit from './components/Edit';
 import Navbar from './components/Navbar';
-import Home from './pages/Home/HomePage';
-import List from './pages/List/ListPage';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ContactPage from './pages/Contact/ContactPage';
+import MenuPage from './pages/List/Menu/MenuPage';
 
 const MainRoutes = ():JSX.Element => {
     return (
@@ -15,8 +14,7 @@ const MainRoutes = ():JSX.Element => {
         </div>
         <div className='main__right'>
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/list" element={<List/>} />
+                <Route path="/" element={<MenuPage/>} />
                 <Route path="/edit/:id" element={<Edit/>} />
                 <Route path="/about" element={<AboutUs/>} />
                 <Route path='/contact' element={<ContactPage/>} />

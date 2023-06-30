@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../store';
 import { getOneProduct } from '../store/actions/product.action';
 import { IProduct } from '../types/productTypes';
 import { editProduct } from '../utils/functions';
+import { DRINKS_API } from '../utils/consts';
 
 const Edit = () => {
     const product = useAppSelector(state=>state.product.product)
@@ -15,6 +16,7 @@ const Edit = () => {
         price: product.price,
         image: product.image,
         description: product.description,
+        type:product.type
     })
 
     const saveEdited = (id:string) => {
@@ -22,13 +24,13 @@ const Edit = () => {
             ...editedProduct,
             id:id
         }
-        editProduct(id, obj, dispatch)
-        navigate('/list')
+        editProduct(id, DRINKS_API, obj, dispatch)
+        navigate('/')
     }
 
     useEffect(()=>{
         if(id){
-            getOneProduct(dispatch, id)
+            getOneProduct(dispatch, DRINKS_API, id)
         }
     }, [id])
     
@@ -40,6 +42,7 @@ const Edit = () => {
             <input type="number" placeholder='price' value={editedProduct.price} onChange={(e)=>setEditedProduct({...editedProduct, price:+e.target.value})} />
             <input placeholder='image' value={editedProduct.image} onChange={(e)=>setEditedProduct({...editedProduct, image:e.target.value})} />
             <input placeholder='description' value={editedProduct.description} onChange={(e)=>setEditedProduct({...editedProduct, description:e.target.value})}/>
+            <input placeholder='type' value={editedProduct.type} onChange={(e)=>setEditedProduct({...editedProduct, type:e.target.value})}/>
             <button onClick={()=>{
                 if(id){
                     saveEdited(id)

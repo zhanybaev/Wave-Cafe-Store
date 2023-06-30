@@ -13,7 +13,8 @@ const initialState:ProductState={
         id: '',
         image: '',
         description:'',
-        price: 0
+        price: 0,
+        type:''
     }
 }
 
