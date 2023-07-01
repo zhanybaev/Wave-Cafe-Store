@@ -463,6 +463,23 @@ nav .active, .nav__item:hover {
   border-bottom: 4px solid #96FEFF;
 }
 
+@media screen and (max-width: 495px) {
+  .filterBar {
+    height: auto;
+  }
+  .filterBar ul {
+    height: 100%;
+    padding: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filterBar ul li {
+    margin-bottom: 10px;
+  }
+}
+
 @font-face {
   font-family: 'EBCorp-Regular';
   src: url(../assets/fonts/EBCorp-RegularOblique.ttf);
@@ -484,6 +501,7 @@ nav .active, .nav__item:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
+  width: 100%;
 }
 
 .card__image {
@@ -496,6 +514,7 @@ nav .active, .nav__item:hover {
   padding: 20px 25px;
   min-height: 172px;
   background: rgba(0, 0, 0, 0.615);
+  width: calc(100% - 180px);
 }
 
 .productInfo .description {
@@ -744,5 +763,58 @@ nav .active, .nav__item:hover {
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
   }
+}
+
+@media screen and (max-width: 550px) {
+  .action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .action button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+  }
+  .card__image {
+    margin-bottom: 15px;
+  }
+  .productInfo {
+    width: 100%;
+  }
+  .action {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@font-face {
+  font-family: 'EBCorp-Regular';
+  src: url(../assets/fonts/EBCorp-RegularOblique.ttf);
+}
+
+@font-face {
+  font-family: 'EBCorp-Medium';
+  src: url(../assets/fonts/EBCorp-MediumOblique.ttf);
+}
+
+.menu {
+  width: 100%;
+  max-width: 660px;
+}
+
+.list {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

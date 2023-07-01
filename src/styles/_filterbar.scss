@@ -28,3 +28,17 @@
         border-bottom: 4px solid #96FEFF;
     }
 }
+
+@media screen and (max-width:495px) {
+    .filterBar{
+        height: auto;
+        ul{
+            height: 100%;
+            padding: 15px;
+            flex-direction: column;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

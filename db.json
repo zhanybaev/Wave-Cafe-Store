@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "id": ":r0:",
-      "title": "Iced Americano",
-      "price": 10.25,
-      "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
-      "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
-      "type": "Hot coffee"
-    },
-    {
       "id": ":r021:",
       "title": "Iced Americano",
       "price": 10.25,

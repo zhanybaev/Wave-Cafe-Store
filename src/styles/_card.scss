@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    width: 100%;
 }
 
 .card__image{
@@ -17,6 +18,7 @@
     padding: 20px 25px;;
     min-height: 172px;
     background: $transparent;   
+    width: calc(100% - 180px);
     .description{
         color: white;
         line-height: 32.4px;
@@ -214,4 +216,30 @@
 @keyframes drop {
     0% {transform: translateY(0px);}
     100% {transform: translateY(1px);}
+}
+
+@media screen and (max-width:550px) {
+    .action{
+        flex-direction: column;
+        gap: 10px;
+        button{
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width:495px) {
+    .card{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .card__image{
+        margin-bottom: 15px;
+    }
+    .productInfo{
+        width: 100%;
+    }
+    .action{
+        align-items: center;
+    }
 }
