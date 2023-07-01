@@ -16,11 +16,11 @@ const List = ({products, API}:IListProps) => {
     }, [])
 
     return ( 
-        <div>
+        <section className='list' >
             {products.map((item) =>(
                 <Card key={item.id} item={item} />
             ))}
-        </div>
+        </section >
     );
 };
 
