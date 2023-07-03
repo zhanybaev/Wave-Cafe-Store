@@ -814,7 +814,57 @@ nav .active, .nav__item:hover {
   max-width: 660px;
 }
 
+.navAdd {
+  background-color: rgba(0, 0, 0, 0.615);
+  height: 80px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navAdd a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.navAdd .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-size: 25px;
+}
+
+.navAdd span {
+  color: white;
+  font-size: 20.2px;
+}
+
 .list {
   width: 100%;
+}
+
+@media screen and (max-width: 495px) {
+  .navAdd {
+    margin-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

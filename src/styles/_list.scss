@@ -5,6 +5,37 @@
     max-width: 660px;
 }
 
+.navAdd{
+    background-color: $transparent;
+    height: 80px;
+    margin-bottom: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 25px;
+    }
+    span{
+        color: white;
+        font-size: 20.2px;
+    }
+}
+
 .list{
     width: 100%;
+}
+
+@media screen and (max-width:495px) {
+    .navAdd{
+        margin-bottom: 10px;
+    }
 }
