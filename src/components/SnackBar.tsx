@@ -5,14 +5,15 @@ interface ISnackBarProps{
 }
 
 const SnackBar = ({text, type, showBar}:ISnackBarProps) => {
-    const successIcon = require('../assets/icons/success-icon.svg')
+    const successIcon = require('../assets/icons/success-icon.svg');
+    const errorIcon = require('../assets/icons/error-icon.svg')
     return (
         <figure 
-            style={{visibility: showBar ? 'visible' : 'hidden'}} 
+            style={{display: showBar ? 'block' : 'none'}} 
             className={`notification ${type}-notification`}>
             <div className="notification__body">
                 <img 
-                    src={successIcon.default} 
+                    src={type==='success'?successIcon.default:errorIcon.default} 
                     alt="Success" 
                     className='notification__icon'
                     title='Success'

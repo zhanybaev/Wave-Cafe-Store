@@ -1,16 +1,15 @@
 @import 'consts';
 
 .notification{
-    position: absolute;
+    position: fixed;
     bottom: 4px;
     right: 4px;
     width: max-content;
     border-radius: 6px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(30px);
     opacity: 0;
     visibility: hidden;
-    animation: fade-in 3s linear;
+    animation: fade-in 5s linear;
 }
 
 .success-notification{
@@ -21,6 +20,10 @@
 .error-notification{
     background: rgb(110, 22, 22);
     color: rgb(238, 79, 79);
+    color: white;
+    .notification__progress{
+        background: linear-gradient(to right, rgb(110, 22, 22), white);
+    }
 }
 
 .notification__icon{
@@ -46,18 +49,19 @@
     transform-origin: left;
     background: linear-gradient(to right, #313e2c, #aaec8a);
     border-radius: inherit;
-    animation: progress 2.5s 0.3s linear;
+    animation: progress 4.5s 0.3s linear;
 }
 
 @keyframes fade-in{
     5%{
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
     }
     95%{
         opacity: 1;
-        transform: translateY(0);
+    }
+    100%{
+        display: none;
     }
 }
 

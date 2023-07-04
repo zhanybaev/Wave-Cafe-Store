@@ -1,1 +1,97 @@
 @import 'consts';
+
+.addForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 660px;
+    form{
+        padding: 40px 50px;
+        background: $transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        input, textarea,select{
+            padding: 15px;
+            width: 100%;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            font-size: 16.5px;
+            line-height: 24px;
+            font-weight: 400;
+            background: transparent;
+            color: #fff;
+            border: 0;
+            border-bottom: 1px solid white;
+        }
+        input::placeholder, textarea::placeholder{
+            color: #fff;
+            font-size: 16.5px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        input{
+            margin-bottom: 25px;
+        }
+        button{
+            color: $green;
+            background: white;
+            padding: 12px 40px;
+            transition: all 0.3s ease;
+            font-size: 22.4px;
+            font-family: Arial;
+            border: 0;
+            margin-top: 30px;
+            float: right;
+            cursor: pointer;
+            max-width: 200px;
+        }
+        button:hover{
+            color: white;
+            background: $green;
+        }
+        select{
+            padding-left: 10px;
+            margin-bottom: 25px;
+        }
+        option{
+            background: black;
+            font-size: 18.5px ;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        }
+        option:hover, option:focus{
+            box-shadow: 0 0 10px 100px red inset !important;
+            background: red !important
+        }
+    }
+}
+
+.addForm__text{
+    background: $transparent;
+    padding: 45px 50px;
+    color: white;
+    background: $transparent;
+    h2{
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        color: $aqua;
+        font-size: 29px;
+        margin-bottom: 22.410px;
+    }
+    p{
+        line-height: 32.4px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+@media screen and (max-width:465px) {
+    .addForm__text, .addForm form{
+        padding: 30px;
+    }
+}
