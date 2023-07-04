@@ -16,7 +16,7 @@ const Card = (props:CardProps):JSX.Element => {
     const dispatch=useAppDispatch()
     const navigate=useNavigate()
     // ! Here will be data from firebases
-    const user:string = 'notAdmin'
+    const user:string = 'admin'
 
     const goToEdit = (id:string):void => {
         navigate(`/edit/${id}`)

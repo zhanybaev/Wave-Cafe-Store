@@ -31,6 +31,30 @@
       "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
       "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
       "type": "Hot coffee"
+    },
+    {
+      "title": "Hot Latte",
+      "type": "Hot Coffee",
+      "price": 13,
+      "image": "https://images.rawpixel.com/image_png_200/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNTcwLWVsZW1lbnQtMDIyLnBuZw.png",
+      "description": "Amazing drink",
+      "id": ":r0:"
+    },
+    {
+      "title": "Coffee ",
+      "type": "Ice Coffee",
+      "price": 32,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiEZ5xUD91jJJpj2s1L7qFtB2crfo6DcDBEBhPEurj2gqQWgfiley34bRgJGK_fpSKMDU&usqp=CAU",
+      "description": "description",
+      "id": "778329a4-06c2-41a0-9591-ea886949db2e"
+    },
+    {
+      "title": "Coffe",
+      "type": "HoT Coffee",
+      "price": 89,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjTRhgppNHAFNTPNTJZvpYH9GvAt5yZKBatm_UlFkwDtekjxcnoUfdBNbYMyLSdjsBqyg&usqp=CAU",
+      "description": "desv",
+      "id": "9dc239d4-ff9b-4e32-bd8e-a4d0b9609e86"
     }
   ]
 }

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ContactPage from './pages/Contact/ContactPage';
 import MenuPage from './pages/List/Menu/MenuPage';
+import AddPage from './pages/Add/AddPage';
 
 const MainRoutes = ():JSX.Element => {
     return (
@@ -16,6 +17,7 @@ const MainRoutes = ():JSX.Element => {
             <Routes>
                 <Route path="/" element={<MenuPage/>} />
                 <Route path="/edit/:id" element={<Edit/>} />
+                <Route path="/add" element={<AddPage/>} />
                 <Route path="/about" element={<AboutUs/>} />
                 <Route path='/contact' element={<ContactPage/>} />
             </Routes>
