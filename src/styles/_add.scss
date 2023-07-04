@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 20px;
     max-width: 660px;
+    animation: fade-in 1s;
     form{
         padding: 40px 50px;
         background: $transparent;

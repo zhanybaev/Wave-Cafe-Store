@@ -89,6 +89,8 @@ nav {
       flex-wrap: wrap;
   gap: 20px;
   position: fixed;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 header {
@@ -205,6 +207,8 @@ nav .active, .nav__item:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 .aboutUs h2 {
@@ -328,6 +332,8 @@ nav .active, .nav__item:hover {
           flex-direction: column;
   gap: 20px;
   max-width: 660px;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 .contact__text {
@@ -428,6 +434,8 @@ nav .active, .nav__item:hover {
   background-color: rgba(0, 0, 0, 0.615);
   height: 80px;
   color: white;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 .filterBar ul {
@@ -502,8 +510,8 @@ nav .active, .nav__item:hover {
           justify-content: space-between;
   margin-top: 20px;
   width: 100%;
-  -webkit-animation: list-fade-in 1s;
-          animation: list-fade-in 1s;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 .card__image {
@@ -862,11 +870,11 @@ nav .active, .nav__item:hover {
 
 .list {
   width: 100%;
-  -webkit-animation: list-fade-in 1s;
-          animation: list-fade-in 1s;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
-@-webkit-keyframes list-fade-in {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -875,7 +883,7 @@ nav .active, .nav__item:hover {
   }
 }
 
-@keyframes list-fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -912,8 +920,8 @@ nav .active, .nav__item:hover {
           box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
-  -webkit-animation: fade-in 5s linear;
-          animation: fade-in 5s linear;
+  -webkit-animation: notification-fade-in 5s linear;
+          animation: notification-fade-in 5s linear;
 }
 
 .success-notification {
@@ -969,7 +977,7 @@ nav .active, .nav__item:hover {
           animation: progress 4.5s 0.3s linear;
 }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes notification-fade-in {
   5% {
     opacity: 1;
     visibility: visible;
@@ -982,7 +990,7 @@ nav .active, .nav__item:hover {
   }
 }
 
-@keyframes fade-in {
+@keyframes notification-fade-in {
   5% {
     opacity: 1;
     visibility: visible;
@@ -1030,6 +1038,8 @@ nav .active, .nav__item:hover {
           flex-direction: column;
   gap: 20px;
   max-width: 660px;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
 }
 
 .addForm form {

@@ -11,6 +11,7 @@ interface IListProps{
 
 const List = ({products, API}:IListProps) => {
     const dispatch=useAppDispatch()
+    
     useEffect(()=>{
         getAllProducts(dispatch, API)
     }, [])

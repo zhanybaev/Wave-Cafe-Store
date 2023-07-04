@@ -1,68 +1,76 @@
 {
   "products": [
     {
-      "id": ":r021:",
-      "title": "Iced Americano",
-      "price": 10.25,
-      "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
-      "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
-      "type": "Hot Coffee"
-    },
-    {
-      "id": ":r0432:",
-      "title": "Iced Americano",
-      "price": 10.25,
-      "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
-      "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
-      "type": "Hot Coffee"
-    },
-    {
-      "id": ":r4320:",
-      "title": "Iced Americano",
-      "price": 10.25,
-      "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
-      "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
-      "type": "Hot Coffee"
-    },
-    {
-      "id": ":890809890r0:",
-      "title": "Iced Americano",
-      "price": 10.25,
-      "image": "https://www.brian-coffee-spot.com/wp-content/uploads/2018/04/Thumbnail-Moss-Coffee-20180331_123348t-200x200.jpg",
-      "description": "Here is a short description for the first item. Wave Cafe Template is provided by Tooplate.",
-      "type": "Hot Coffee"
-    },
-    {
-      "title": "Hot Latte",
-      "type": "Hot Coffee",
-      "price": 13,
-      "image": "https://images.rawpixel.com/image_png_200/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNTcwLWVsZW1lbnQtMDIyLnBuZw.png",
-      "description": "Amazing drink",
-      "id": ":r0:"
-    },
-    {
-      "title": "Coffee ",
-      "type": "Iced Coffee",
-      "price": 32,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiEZ5xUD91jJJpj2s1L7qFtB2crfo6DcDBEBhPEurj2gqQWgfiley34bRgJGK_fpSKMDU&usqp=CAU",
-      "description": "description",
-      "id": "778329a4-06c2-41a0-9591-ea886949db2e"
-    },
-    {
-      "title": "Coffe",
-      "type": "Hot Coffee",
-      "price": 89,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjTRhgppNHAFNTPNTJZvpYH9GvAt5yZKBatm_UlFkwDtekjxcnoUfdBNbYMyLSdjsBqyg&usqp=CAU",
-      "description": "desv",
-      "id": "9dc239d4-ff9b-4e32-bd8e-a4d0b9609e86"
-    },
-    {
       "title": "Strawberry Fresh",
       "type": "Fruit Juice",
       "price": 22,
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/292/917/small/a-glass-of-juice-with-fruit-ai-generate-photo.jpg",
       "description": "Fresh strawberry juice is a delightful and refreshing beverage that captures the sweet and tangy essence of ripe strawberries. Made from luscious, plump strawberries, this vibrant red juice is bursting with natural flavors and nutritional benefits.",
       "id": "111532d1-fcb0-43df-a2b9-5cc5c6592585"
+    },
+    {
+      "title": "Strawberry Smoothie",
+      "type": "Fruit Juice",
+      "price": 12,
+      "image": "https://foodsharingvegan.com/wp-content/uploads/2022/03/Strawberry-Yogurt-Smoothie-Plant-Based-on-a-Budget-1-2.jpg",
+      "description": "This product is a blended mixture of strawberry liquid, yogurt, and ice",
+      "id": "51348d4c-a5ba-4613-b305-9ba93a220197"
+    },
+    {
+      "title": "Iced Americano",
+      "type": "Iced Coffee",
+      "price": 10,
+      "image": "https://globalassets.starbucks.com/assets/921a409e6f55407da52eee4c8ad13ada.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Traditional Iced Americano is made by pouring cold water, over ice followed by shots of espresso. With manual pour over, the coffee drains directly onto the cold water and ice, so it chills during brewing.",
+      "id": "80eee3f6-d8e1-4aa7-96f4-e7815d8576e8"
+    },
+    {
+      "title": "Iced Cappuccino",
+      "type": "Iced Coffee",
+      "price": 12,
+      "image": "https://static.vecteezy.com/system/resources/previews/022/383/540/non_2x/glasses-of-iced-coffee-drinks-iced-cappuccino-png.png",
+      "description": "An iced cappuccino is made by layering espresso and foamed milk in a glass of ice. It has a stronger espresso flavor than an iced latte, as it uses less milk in comparison",
+      "id": "0edb8bfc-4eb7-4f20-a388-a7450d886d6a"
+    },
+    {
+      "title": "Iced Espresso",
+      "type": "Iced Coffee",
+      "price": 14,
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/011/048/029/small/iced-coffee-watercolor-set-free-png.png",
+      "description": "Iced espresso is espresso served over ice, often with milk. It's similar to iced coffee, but it uses espresso instead of brewed coffee. The espresso is shaken with ice and sweetener before serving.",
+      "id": "e54cadaf-739c-4db3-b6f9-5c98daf9f70d"
+    },
+    {
+      "title": "Iced Latte",
+      "type": "Iced Coffee",
+      "price": 11,
+      "image": "https://cdn.shopify.com/s/files/1/0033/9148/8089/articles/PISTACHIO_Recipe_Images-25.png?v=1684263869",
+      "description": "The iced latte is the cold relative of the traditional latte and is made up of ice, a shot of espresso and cold milk. Since espresso is an integral part of the iced latte, you'll be needing an espresso machine for this. An iced latte is brewed by pouring espresso over ice and adding frothed milk on top",
+      "id": "2b9965a7-58f8-4cb2-9c8f-416de7e105f8"
+    },
+    {
+      "title": "Hot Americano",
+      "type": "Hot Coffee",
+      "price": 8,
+      "image": "https://thumbs.dreamstime.com/b/hot-americano-coffee-white-glass-white-background-92375858.jpg",
+      "description": "An Americano is an espresso drink made with hot water and espresso, also called a Caffe Americano. The drink can be made with either one or two shots of espresso, and varying ratios of water. Diluting the strong dark espresso roast brings the flavor closer to a drip coffee: which might be where the name originated",
+      "id": "76f1c1b8-dd7c-4e93-bc6f-fb1e96ddb983"
+    },
+    {
+      "title": "Hot Cappuccino",
+      "type": "Hot Coffee",
+      "price": 10,
+      "image": "https://freepngimg.com/thumb/coffee/147498-photos-hot-cappuccino-png-image-high-quality-thumb.png",
+      "description": "A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma",
+      "id": "2820b257-a533-435c-8731-8a25cc0603e8"
+    },
+    {
+      "title": "Hot Espresso",
+      "type": "Hot Coffee",
+      "price": 7,
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/438/448/small/espresso-coffee-cutout-free-png.png",
+      "description": "As a beverage, espresso is a concentrated form of coffee brewed with high pressure, hot water and finely ground coffee beans. Espresso is thicker than regular coffee and has a layer of “crema” on top, which results from air bubbles mixing with the coffee's oils",
+      "id": "fc022912-c4f0-4602-ab95-c6db7de44a55"
     }
   ]
 }

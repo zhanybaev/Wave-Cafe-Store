@@ -4,6 +4,7 @@
     background-color: $transparent;
     height: 80px;
     color: white;
+    animation: fade-in 1s;
     ul{
         display: flex;
         justify-content: space-around;
