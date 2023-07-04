@@ -502,6 +502,8 @@ nav .active, .nav__item:hover {
           justify-content: space-between;
   margin-top: 20px;
   width: 100%;
+  -webkit-animation: list-fade-in 1s;
+          animation: list-fade-in 1s;
 }
 
 .card__image {
@@ -860,6 +862,26 @@ nav .active, .nav__item:hover {
 
 .list {
   width: 100%;
+  -webkit-animation: list-fade-in 1s;
+          animation: list-fade-in 1s;
+}
+
+@-webkit-keyframes list-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes list-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 495px) {

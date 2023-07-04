@@ -12,7 +12,10 @@ const Menu = () => {
     const products = useAppSelector(state=>state.product.products)
     const [type, setType] = useState('Iced Coffee')
     const user:string = 'admin'
-        
+    
+    const filteredProducts = products.filter(item=>{
+        return item.type===type
+    })
     return (
         <section className='menu'>
             {
@@ -30,7 +33,7 @@ const Menu = () => {
                     <></>
             }
             <FilterBar type={type} setType={setType} />
-            <List products={products} API={DRINKS_API} />
+            <List products={filteredProducts} API={DRINKS_API} />
         </section>
     );
 };
