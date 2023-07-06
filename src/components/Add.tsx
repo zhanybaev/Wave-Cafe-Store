@@ -69,7 +69,7 @@ const Add = () => {
                     <option value="Iced Coffee">Iced Coffee</option>
                     <option value="Fruit Juice">Fruit Juice</option>
                 </select>
-                <input ref={priceRef} required type="Number" placeholder='Price'/>
+                <input step={'any'} ref={priceRef} required type="Number" placeholder='Price'/>
                 <input ref={imgRef} required placeholder='Image'/>
                 <textarea rows={6} ref={descrRef} required placeholder='Description'></textarea>
                 <button type='submit'>Add</button>

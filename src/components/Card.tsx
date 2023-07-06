@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../store';
 import { IProduct } from '../types/productTypes';
 import { deleteProduct } from '../utils/functions';
@@ -9,18 +8,22 @@ import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 interface CardProps{
     item: IProduct;
+    setShowModal(showModal:boolean):void
 };
 
-const Card = (props:CardProps):JSX.Element => {
-    const { item } = props;
+const Card = ({item, setShowModal} :CardProps):JSX.Element => {
     const dispatch=useAppDispatch()
-    const navigate=useNavigate()
     // ! Here will be data from firebases
     const user:string = 'admin'
 
     const goToEdit = (id:string):void => {
-        navigate(`/edit/${id}`)
+        // navigate(`/edit/${id}`)
         // getOneProduct(dispatch, id)
+        setShowModal(true)
+        const html = document.querySelector('html');
+        if (html) {
+            html.style.overflow = 'hidden';
+        }
     }
 
     return (

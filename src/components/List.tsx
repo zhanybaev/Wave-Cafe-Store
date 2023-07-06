@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../store';
 import { getAllProducts } from '../store/actions/product.action';
-import Card from './Card';
 import { IProduct } from '../types/productTypes';
+import Card from './Card';
+import Modal from '../components/Modal'
 
 interface IListProps{
     products: IProduct[],
@@ -11,6 +12,7 @@ interface IListProps{
 
 const List = ({products, API}:IListProps) => {
     const dispatch=useAppDispatch()
+    const [showModal, setShowModal]=useState(false)
     
     useEffect(()=>{
         getAllProducts(dispatch, API)
@@ -19,8 +21,9 @@ const List = ({products, API}:IListProps) => {
     return ( 
         <section className='list' >
             {products.map((item) =>(
-                <Card key={item.id} item={item} />
+                <Card setShowModal={setShowModal} key={item.id} item={item} />
             ))}
+            <Modal setShowModal={setShowModal} showModal={showModal} />
         </section >
     );
 };
