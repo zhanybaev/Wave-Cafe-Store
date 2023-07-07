@@ -5,6 +5,7 @@ import { addProduct } from '../utils/functions';
 import { DRINKS_API } from '../utils/consts';
 import { IProduct } from '../types/productTypes';
 import SnackBar from './SnackBar';
+import Form from './Form';
 
 const Add = () => {
     const dispatch=useAppDispatch()
@@ -62,22 +63,14 @@ const Add = () => {
                     In our online coffee house app, we have implemented strict permissions and access controls to ensure a seamless and secure experience for our users. One such restriction is that only authorized administrators have the permission to add new coffee items to our menu.
                 </p>
             </div>
-            <form onSubmit={formHandler}>
-                <input defaultValue={''} ref={titleRef} required placeholder='Title'/>
-                <select ref={typeRef}>
-                    <option value="Hot Coffee">Hot Coffee</option>
-                    <option value="Iced Coffee">Iced Coffee</option>
-                    <option value="Fruit Juice">Fruit Juice</option>
-                </select>
-                <input step={'any'} ref={priceRef} required type="Number" placeholder='Price'/>
-                <input ref={imgRef} required placeholder='Image'/>
-                <textarea rows={6} ref={descrRef} required placeholder='Description'></textarea>
-                <button type='submit'>Add</button>
-            </form>
-            <SnackBar
-                showBar={showBar}
-                text={text}     
-                type={text==='success' ? 'success' : 'error' } 
+            <Form 
+                formHandler={formHandler} 
+                titleRef={titleRef} 
+                typeRef={typeRef} 
+                priceRef={priceRef}
+                imgRef={imgRef} 
+                descrRef={descrRef} />
+            <SnackBar showBar={showBar} text={text} type={text==='success' ? 'success' : 'error' } 
             /> 
         </div>
     );

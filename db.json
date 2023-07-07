@@ -19,7 +19,7 @@
     {
       "title": "Iced Americano",
       "type": "Iced Coffee",
-      "price": 10,
+      "price": 15.45,
       "image": "https://globalassets.starbucks.com/assets/921a409e6f55407da52eee4c8ad13ada.jpg?impolicy=1by1_wide_topcrop_630",
       "description": "Traditional Iced Americano is made by pouring cold water, over ice followed by shots of espresso. With manual pour over, the coffee drains directly onto the cold water and ice, so it chills during brewing.",
       "id": "80eee3f6-d8e1-4aa7-96f4-e7815d8576e8"
@@ -35,7 +35,7 @@
     {
       "title": "Iced Espresso",
       "type": "Iced Coffee",
-      "price": 14,
+      "price": 14.5,
       "image": "https://static.vecteezy.com/system/resources/thumbnails/011/048/029/small/iced-coffee-watercolor-set-free-png.png",
       "description": "Iced espresso is espresso served over ice, often with milk. It's similar to iced coffee, but it uses espresso instead of brewed coffee. The espresso is shaken with ice and sweetener before serving.",
       "id": "e54cadaf-739c-4db3-b6f9-5c98daf9f70d"

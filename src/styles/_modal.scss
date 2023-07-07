@@ -8,16 +8,20 @@
     top: 0;
     left: 0;
     animation: fade-in 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal{
     background: $transparent;
-    position: fixed;
     width: 40%;
+    top: 40px;
     left: 0; 
     right: 0; 
     margin: 0 auto; 
     min-height: 200px;
+    overflow: visible;
 }
 
 

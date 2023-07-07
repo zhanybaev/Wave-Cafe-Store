@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Edit from './components/Edit';
 import Navbar from './components/Navbar';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ContactPage from './pages/Contact/ContactPage';
@@ -16,7 +15,6 @@ const MainRoutes = ():JSX.Element => {
         <div className='main__right'>
             <Routes>
                 <Route path="/" element={<MenuPage/>} />
-                <Route path="/edit/:id" element={<Edit/>} />
                 <Route path="/add" element={<AddPage/>} />
                 <Route path="/about" element={<AboutUs/>} />
                 <Route path='/contact' element={<ContactPage/>} />

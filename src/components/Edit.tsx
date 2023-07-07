@@ -1,53 +1,73 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
-import { getOneProduct } from '../store/actions/product.action';
-import { IProduct } from '../types/productTypes';
 import { editProduct } from '../utils/functions';
 import { DRINKS_API } from '../utils/consts';
+import { IProduct } from '../types/productTypes';
+import SnackBar from './SnackBar';
+import Form from './Form';
 
-const Edit = () => {
+interface IEditProps{
+    closeModal():void
+}
+
+const Edit = ({closeModal}:IEditProps) => {
     const product = useAppSelector(state=>state.product.product)
-    const { id } = useParams()
     const dispatch=useAppDispatch()
-    const navigate = useNavigate()
-    const [editedProduct, setEditedProduct] = useState({
-        title:product.title,
-        price: product.price,
-        image: product.image,
-        description: product.description,
-        type:product.type
-    })
+    const [showBar, setShowBar] = useState(false)
+    const [text, setText] = useState('success')
 
-    const saveEdited = (id:string) => {
-        const obj:IProduct = {
-            ...editedProduct,
-            id:id
+    const titleRef = useRef<HTMLInputElement>(null);
+    const typeRef = useRef<HTMLSelectElement>(null)
+    const priceRef = useRef<HTMLInputElement>(null)
+    const imgRef = useRef<HTMLInputElement>(null)
+    const descrRef = useRef<HTMLTextAreaElement>(null)
+
+    if(titleRef.current && typeRef.current && priceRef.current && imgRef.current && descrRef.current){
+        console.log('hello');
+        
+        titleRef.current.value=product.title
+        typeRef.current.value=product.type
+        priceRef.current.value=`${product.price}`
+        imgRef.current.value=product.image
+        descrRef.current.value=product.description
+    } 
+
+    const formHandler = async(e:React.FormEvent)=>{
+        e.preventDefault()
+        if(titleRef.current && typeRef.current && priceRef.current && imgRef.current && descrRef.current){
+            const obj:IProduct ={
+                title: titleRef.current.value,
+                type: typeRef.current.value,
+                price:+priceRef.current.value,
+                image:imgRef.current.value,
+                description:descrRef.current.value,
+                id: product.id
+            }
+            try {
+                await editProduct(product.id, DRINKS_API, obj, dispatch);  
+                closeModal()             
+            } catch (error) {
+                const result:string = (error as Error).name;
+                const errorMessage = result==="AxiosError"?'Request Failed' : "Something went wrong, try later"
+                setText(errorMessage)
+            }
         }
-        editProduct(id, DRINKS_API, obj, dispatch)
-        navigate('/')
+        setShowBar(true)
+        setTimeout(()=>{
+            setShowBar(false)
+        }, 5000)
     }
-
-    useEffect(()=>{
-        if(id){
-            getOneProduct(dispatch, DRINKS_API, id)
-        }
-    }, [id])
     
-    console.log(editedProduct);
-
     return (
-        <div>
-            <input placeholder='title' value={editedProduct.title} onChange={(e)=>setEditedProduct({...editedProduct, title:e.target.value})} />
-            <input type="number" placeholder='price' value={editedProduct.price} onChange={(e)=>setEditedProduct({...editedProduct, price:+e.target.value})} />
-            <input placeholder='image' value={editedProduct.image} onChange={(e)=>setEditedProduct({...editedProduct, image:e.target.value})} />
-            <input placeholder='description' value={editedProduct.description} onChange={(e)=>setEditedProduct({...editedProduct, description:e.target.value})}/>
-            <input placeholder='type' value={editedProduct.type} onChange={(e)=>setEditedProduct({...editedProduct, type:e.target.value})}/>
-            <button onClick={()=>{
-                if(id){
-                    saveEdited(id)
-                }
-            }} >Update</button>
+        <div className='editForm'>
+            <Form 
+                formHandler={formHandler} 
+                titleRef={titleRef} 
+                typeRef={typeRef} 
+                priceRef={priceRef}
+                imgRef={imgRef} 
+                descrRef={descrRef} />
+            <SnackBar showBar={showBar} text={text} type={text==='success' ? 'success' : 'error' }/> 
         </div>
     );
 };

@@ -5,6 +5,7 @@ import { DRINKS_API } from '../utils/consts';
 import CartButton from './CartButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { getOneProduct } from '../store/actions/product.action';
 
 interface CardProps{
     item: IProduct;
@@ -17,8 +18,7 @@ const Card = ({item, setShowModal} :CardProps):JSX.Element => {
     const user:string = 'admin'
 
     const goToEdit = (id:string):void => {
-        // navigate(`/edit/${id}`)
-        // getOneProduct(dispatch, id)
+        getOneProduct(dispatch, DRINKS_API, id)
         setShowModal(true)
         const html = document.querySelector('html');
         if (html) {

@@ -1027,7 +1027,7 @@ nav .active, .nav__item:hover {
   src: url(../assets/fonts/EBCorp-MediumOblique.ttf);
 }
 
-.addForm {
+.addForm, .editForm {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1042,7 +1042,7 @@ nav .active, .nav__item:hover {
           animation: fade-in 1s;
 }
 
-.addForm form {
+.addForm form, .editForm form {
   padding: 40px 50px;
   background: rgba(0, 0, 0, 0.615);
   display: -webkit-box;
@@ -1052,12 +1052,13 @@ nav .active, .nav__item:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: visible;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
 }
 
-.addForm form input, .addForm form textarea, .addForm form select {
+.addForm form input, .addForm form textarea, .addForm form select, .editForm form input, .editForm form textarea, .editForm form select {
   padding: 15px;
   width: 100%;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -1070,41 +1071,42 @@ nav .active, .nav__item:hover {
   border-bottom: 1px solid white;
 }
 
-.addForm form input::-webkit-input-placeholder, .addForm form textarea::-webkit-input-placeholder {
+.addForm form input::-webkit-input-placeholder, .addForm form textarea::-webkit-input-placeholder, .editForm form input::-webkit-input-placeholder, .editForm form textarea::-webkit-input-placeholder {
   color: #fff;
   font-size: 16.5px;
 }
 
-.addForm form input:-ms-input-placeholder, .addForm form textarea:-ms-input-placeholder {
+.addForm form input:-ms-input-placeholder, .addForm form textarea:-ms-input-placeholder, .editForm form input:-ms-input-placeholder, .editForm form textarea:-ms-input-placeholder {
   color: #fff;
   font-size: 16.5px;
 }
 
-.addForm form input::-ms-input-placeholder, .addForm form textarea::-ms-input-placeholder {
+.addForm form input::-ms-input-placeholder, .addForm form textarea::-ms-input-placeholder, .editForm form input::-ms-input-placeholder, .editForm form textarea::-ms-input-placeholder {
   color: #fff;
   font-size: 16.5px;
 }
 
-.addForm form input::placeholder, .addForm form textarea::placeholder {
+.addForm form input::placeholder, .addForm form textarea::placeholder, .editForm form input::placeholder, .editForm form textarea::placeholder {
   color: #fff;
   font-size: 16.5px;
 }
 
 .addForm form input::-webkit-outer-spin-button,
-.addForm form input::-webkit-inner-spin-button {
+.addForm form input::-webkit-inner-spin-button, .editForm form input::-webkit-outer-spin-button,
+.editForm form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.addForm form input[type=number] {
+.addForm form input[type=number], .editForm form input[type=number] {
   -moz-appearance: textfield;
 }
 
-.addForm form input {
+.addForm form input, .editForm form input {
   margin-bottom: 25px;
 }
 
-.addForm form button {
+.addForm form button, .editForm form button {
   color: #099;
   background: white;
   padding: 12px 40px;
@@ -1119,23 +1121,23 @@ nav .active, .nav__item:hover {
   max-width: 200px;
 }
 
-.addForm form button:hover {
+.addForm form button:hover, .editForm form button:hover {
   color: white;
   background: #099;
 }
 
-.addForm form select {
+.addForm form select, .editForm form select {
   padding-left: 10px;
   margin-bottom: 25px;
 }
 
-.addForm form option {
+.addForm form option, .editForm form option {
   background: black;
   font-size: 18.5px;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-.addForm form option:hover, .addForm form option:focus {
+.addForm form option:hover, .addForm form option:focus, .editForm form option:hover, .editForm form option:focus {
   -webkit-box-shadow: 0 0 10px 100px red inset !important;
           box-shadow: 0 0 10px 100px red inset !important;
   background: red !important;
@@ -1162,7 +1164,7 @@ nav .active, .nav__item:hover {
 }
 
 @media screen and (max-width: 465px) {
-  .addForm__text, .addForm form {
+  .addForm__text, .addForm form, .editForm form {
     padding: 30px;
   }
 }
@@ -1186,16 +1188,26 @@ nav .active, .nav__item:hover {
   left: 0;
   -webkit-animation: fade-in 1s;
           animation: fade-in 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal {
   background: rgba(0, 0, 0, 0.615);
-  position: fixed;
   width: 40%;
+  top: 40px;
   left: 0;
   right: 0;
   margin: 0 auto;
   min-height: 200px;
+  overflow: visible;
 }
 
 .closeModal {

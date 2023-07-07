@@ -1,6 +1,6 @@
 @import 'consts';
 
-.addForm{
+.addForm, .editForm{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@
         background: $transparent;
         display: flex;
         flex-direction: column;
+        overflow-y: visible;
         align-items: end;
         input, textarea,select{
             padding: 15px;
@@ -92,7 +93,7 @@
 }
 
 @media screen and (max-width:465px) {
-    .addForm__text, .addForm form{
+    .addForm__text, .addForm form, .editForm form{
         padding: 30px;
     }
 }
