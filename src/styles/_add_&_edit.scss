@@ -13,10 +13,22 @@
         display: flex;
         flex-direction: column;
         overflow-y: visible;
+        gap: 25px;
         align-items: end;
+        div{
+            width: 100%;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+        }
+        label{
+            color: #fff;
+            font-size: 18.5px;
+        }
         input, textarea,select{
             padding: 15px;
             width: 100%;
+            margin-top: 15px;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
             font-size: 16.5px;
             line-height: 24px;
@@ -24,11 +36,7 @@
             background: transparent;
             color: #fff;
             border: 0;
-            border-bottom: 1px solid white;
-        }
-        input::placeholder, textarea::placeholder{
-            color: #fff;
-            font-size: 16.5px;
+            border: 1px solid gray;
         }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -37,9 +45,6 @@
         }
         input[type=number] {
             -moz-appearance: textfield;
-        }
-        input{
-            margin-bottom: 25px;
         }
         button{
             color: $green;
@@ -89,6 +94,17 @@
         line-height: 32.4px;
         font-size: 18px;
         margin-bottom: 18px;
+    }
+}
+
+.editForm{
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input, select{
+            width: 45%;
+        }
     }
 }
 

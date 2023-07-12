@@ -1053,14 +1053,25 @@ nav .active, .nav__item:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-y: visible;
+  gap: 25px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
 }
 
+.addForm form div, .editForm form div {
+  width: 100%;
+}
+
+.addForm form label, .editForm form label {
+  color: #fff;
+  font-size: 18.5px;
+}
+
 .addForm form input, .addForm form textarea, .addForm form select, .editForm form input, .editForm form textarea, .editForm form select {
   padding: 15px;
   width: 100%;
+  margin-top: 15px;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 16.5px;
   line-height: 24px;
@@ -1068,27 +1079,7 @@ nav .active, .nav__item:hover {
   background: transparent;
   color: #fff;
   border: 0;
-  border-bottom: 1px solid white;
-}
-
-.addForm form input::-webkit-input-placeholder, .addForm form textarea::-webkit-input-placeholder, .editForm form input::-webkit-input-placeholder, .editForm form textarea::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 16.5px;
-}
-
-.addForm form input:-ms-input-placeholder, .addForm form textarea:-ms-input-placeholder, .editForm form input:-ms-input-placeholder, .editForm form textarea:-ms-input-placeholder {
-  color: #fff;
-  font-size: 16.5px;
-}
-
-.addForm form input::-ms-input-placeholder, .addForm form textarea::-ms-input-placeholder, .editForm form input::-ms-input-placeholder, .editForm form textarea::-ms-input-placeholder {
-  color: #fff;
-  font-size: 16.5px;
-}
-
-.addForm form input::placeholder, .addForm form textarea::placeholder, .editForm form input::placeholder, .editForm form textarea::placeholder {
-  color: #fff;
-  font-size: 16.5px;
+  border: 1px solid gray;
 }
 
 .addForm form input::-webkit-outer-spin-button,
@@ -1100,10 +1091,6 @@ nav .active, .nav__item:hover {
 
 .addForm form input[type=number], .editForm form input[type=number] {
   -moz-appearance: textfield;
-}
-
-.addForm form input, .editForm form input {
-  margin-bottom: 25px;
 }
 
 .addForm form button, .editForm form button {
@@ -1163,6 +1150,22 @@ nav .active, .nav__item:hover {
   margin-bottom: 18px;
 }
 
+.editForm form {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.editForm form input, .editForm form select {
+  width: 45%;
+}
+
 @media screen and (max-width: 465px) {
   .addForm__text, .addForm form, .editForm form {
     padding: 30px;
@@ -1183,7 +1186,8 @@ nav .active, .nav__item:hover {
   background-color: rgba(0, 0, 0, 0.45);
   position: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  bottom: 0;
   top: 0;
   left: 0;
   -webkit-animation: fade-in 1s;
