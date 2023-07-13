@@ -61,6 +61,7 @@ const Edit = ({closeModal}:IEditProps) => {
     return (
         <div className='editForm'>
             <Form 
+                btnText={"Save Changes"}
                 formHandler={formHandler} 
                 titleRef={titleRef} 
                 typeRef={typeRef} 

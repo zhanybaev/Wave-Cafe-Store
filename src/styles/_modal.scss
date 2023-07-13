@@ -12,22 +12,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease-out
 }
 
 .modal{
     background: $transparent;
     width: 40%;
     top: 40px;
-    left: 0; 
-    right: 0; 
     margin: 0 auto; 
     min-height: 200px;
     overflow: visible;
 }
 
-
 .closeModal{
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hidden {
+    transition: 1s;
+    opacity: 0;
+}
+
+@media screen and(max-width:992px) {
+    .modal{
+        width: 60%;
+    }
+}
+
+@media screen and(max-width:574px){
+    .modal{
+        margin: 30px auto 115px auto;
+        width: 85%;
+    }
 }

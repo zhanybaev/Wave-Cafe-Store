@@ -13,22 +13,16 @@
         display: flex;
         flex-direction: column;
         overflow-y: visible;
-        gap: 25px;
         align-items: end;
         div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
             width: 100%;
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-        }
-        label{
-            color: #fff;
-            font-size: 18.5px;
         }
         input, textarea,select{
             padding: 15px;
             width: 100%;
-            margin-top: 15px;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
             font-size: 16.5px;
             line-height: 24px;
@@ -36,7 +30,16 @@
             background: transparent;
             color: #fff;
             border: 0;
-            border: 1px solid gray;
+            border-bottom: 1px solid white;
+        }
+        label, input::placeholder, textarea::placeholder{
+            color: #fff;
+            font-size: 16.5px;
+        }
+        label{
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 20px;
         }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -65,7 +68,6 @@
         }
         select{
             padding-left: 10px;
-            margin-bottom: 25px;
         }
         option{
             background: black;
@@ -76,6 +78,38 @@
             box-shadow: 0 0 10px 100px red inset !important;
             background: red !important
         }
+    }
+}
+
+.addForm form div{
+    label{
+        display: none;
+    }            
+    input, select{
+        margin-bottom: 0;
+    }
+}
+
+.editForm{
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        button{
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+    div:nth-child(2), div:nth-child(3){
+        width: 45%;
+    }
+    textarea{
+        margin-top: 10px;
+        max-height: 100px;
+    }
+    input::placeholder, textarea::placeholder{
+        visibility: hidden;
     }
 }
 
@@ -94,17 +128,6 @@
         line-height: 32.4px;
         font-size: 18px;
         margin-bottom: 18px;
-    }
-}
-
-.editForm{
-    form{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        input, select{
-            width: 45%;
-        }
     }
 }
 

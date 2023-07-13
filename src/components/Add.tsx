@@ -64,7 +64,8 @@ const Add = () => {
                 </p>
             </div>
             <Form 
-                formHandler={formHandler} 
+                formHandler={formHandler}
+                btnText={"Add Product"}
                 titleRef={titleRef} 
                 typeRef={typeRef} 
                 priceRef={priceRef}
