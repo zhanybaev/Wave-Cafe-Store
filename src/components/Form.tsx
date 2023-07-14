@@ -11,6 +11,7 @@ interface IFormProps{
 }
 
 const Form = ({btnText, formHandler, titleRef, typeRef, priceRef, imgRef, descrRef}:IFormProps) => {
+    const types = ["Hot Coffee", "Iced Coffee", "Fruit Juice", "Special Item"]
     return (
         <form onSubmit={(e)=>formHandler(e)}>
             <div>
@@ -21,9 +22,11 @@ const Form = ({btnText, formHandler, titleRef, typeRef, priceRef, imgRef, descrR
                 <label htmlFor="type">Type</label>
                 <select defaultValue={'DEFAULT'} ref={typeRef} id="type" >
                     <option value="DEFAULT" disabled>Type</option>
-                    <option value="Hot Coffee">Hot Coffee</option>
-                    <option value="Iced Coffee">Iced Coffee</option>
-                    <option value="Fruit Juice">Fruit Juice</option>
+                    {
+                        types.map((item)=>(
+                            <option key={item} value={item}>{item}</option>
+                        ))
+                    }
                 </select>
             </div>
             <div>

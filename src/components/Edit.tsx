@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
 import { editProduct } from '../utils/functions';
-import { DRINKS_API } from '../utils/consts';
+import { DRINKS_API, SPECIAL_ITEMS_API } from '../utils/consts';
 import { IProduct } from '../types/productTypes';
 import SnackBar from './SnackBar';
 import Form from './Form';
@@ -23,8 +23,6 @@ const Edit = ({closeModal}:IEditProps) => {
     const descrRef = useRef<HTMLTextAreaElement>(null)
 
     if(titleRef.current && typeRef.current && priceRef.current && imgRef.current && descrRef.current){
-        console.log('hello');
-        
         titleRef.current.value=product.title
         typeRef.current.value=product.type
         priceRef.current.value=`${product.price}`
@@ -43,9 +41,9 @@ const Edit = ({closeModal}:IEditProps) => {
                 description:descrRef.current.value,
                 id: product.id
             }
+            const PATCH_API = typeRef.current.value === "Special Item" ? SPECIAL_ITEMS_API : DRINKS_API 
             try {
-                await editProduct(product.id, DRINKS_API, obj, dispatch);  
-                closeModal()             
+                await editProduct(product.id, PATCH_API, obj, dispatch);  
             } catch (error) {
                 const result:string = (error as Error).name;
                 const errorMessage = result==="AxiosError"?'Request Failed' : "Something went wrong, try later"
@@ -54,8 +52,9 @@ const Edit = ({closeModal}:IEditProps) => {
         }
         setShowBar(true)
         setTimeout(()=>{
+            closeModal()
             setShowBar(false)
-        }, 5000)
+        }, 500)
     }
     
     return (

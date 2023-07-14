@@ -16,6 +16,10 @@
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-color: #0a524f00;
+}
+
 a {
   text-decoration: none;
   color: black;

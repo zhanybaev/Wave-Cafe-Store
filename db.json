@@ -1,5 +1,5 @@
 {
-  "products": [
+  "drinks": [
     {
       "title": "Strawberry Fresh",
       "type": "Fruit Juice",
@@ -35,7 +35,7 @@
     {
       "title": "Iced Espresso",
       "type": "Iced Coffee",
-      "price": 14.5,
+      "price": 14.65,
       "image": "https://static.vecteezy.com/system/resources/thumbnails/011/048/029/small/iced-coffee-watercolor-set-free-png.png",
       "description": "Iced espresso is espresso served over ice, often with milk. It's similar to iced coffee, but it uses espresso instead of brewed coffee. The espresso is shaken with ice and sweetener before serving.",
       "id": "e54cadaf-739c-4db3-b6f9-5c98daf9f70d"
@@ -71,6 +71,32 @@
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/438/448/small/espresso-coffee-cutout-free-png.png",
       "description": "As a beverage, espresso is a concentrated form of coffee brewed with high pressure, hot water and finely ground coffee beans. Espresso is thicker than regular coffee and has a layer of “crema” on top, which results from air bubbles mixing with the coffee's oils",
       "id": "fc022912-c4f0-4602-ab95-c6db7de44a55"
+    },
+    {
+      "title": "Test",
+      "type": "Hot Coffee",
+      "price": 7897,
+      "image": "jkhkjhkewqeqw",
+      "description": "eqwewqewqeqw",
+      "id": "38a2c369-0298-4df1-aac8-a2c657986556"
+    }
+  ],
+  "special-items": [
+    {
+      "title": "jjkl",
+      "type": "Fruit Juice",
+      "price": 7897,
+      "image": "jkhkjhk",
+      "description": "hkjhkj",
+      "id": "38a2c369-0298-4df1-aac8-a2c657986556"
+    },
+    {
+      "title": "Croissant",
+      "type": "Special Item",
+      "price": 24,
+      "image": "https://images.pexels.com/photos/3892469/pexels-photo-3892469.jpeg?cs=srgb&dl=pexels-abdulrhman-alkady-3892469.jpg&fm=jpg",
+      "description": "a buttery, crescent-shaped French pastry. Good croissants are light, flaky, and delicately sweet. Enjoy one with a cup of coffee — preferably while sitting in a charming Parisian cafe",
+      "id": "10382c1b-1e18-47b4-a639-7a3eb7b26fa7"
     }
   ]
 }

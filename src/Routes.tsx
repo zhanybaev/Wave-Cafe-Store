@@ -1,10 +1,10 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ContactPage from './pages/Contact/ContactPage';
 import MenuPage from './pages/List/Menu/MenuPage';
 import AddPage from './pages/Add/AddPage';
+import SpecialItemsPage from './pages/List/SpecialItems/SpecialItemsPage';
 
 const MainRoutes = ():JSX.Element => {
     return (
@@ -18,6 +18,7 @@ const MainRoutes = ():JSX.Element => {
                 <Route path="/add" element={<AddPage/>} />
                 <Route path="/about" element={<AboutUs/>} />
                 <Route path='/contact' element={<ContactPage/>} />
+                <Route path='/special-menu' element={<SpecialItemsPage/>} />
             </Routes>
         </div>
         </BrowserRouter>

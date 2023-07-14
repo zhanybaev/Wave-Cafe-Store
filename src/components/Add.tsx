@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useAppDispatch } from '../store';
 import { addProduct } from '../utils/functions';
-import { DRINKS_API } from '../utils/consts';
+import { DRINKS_API, SPECIAL_ITEMS_API } from '../utils/consts';
 import { IProduct } from '../types/productTypes';
 import SnackBar from './SnackBar';
 import Form from './Form';
@@ -40,8 +40,9 @@ const Add = () => {
                 description:descrRef.current.value,
                 id:id
             }
+            const POST_API = typeRef.current.value ==='Special Item' ? SPECIAL_ITEMS_API : DRINKS_API
             try {
-                await addProduct(obj, DRINKS_API, dispatch);               
+                await addProduct(obj, POST_API, dispatch);               
                 resetValues()
             } catch (error) {
                 const result:string = (error as Error).name;
