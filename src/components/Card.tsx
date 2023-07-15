@@ -8,17 +8,18 @@ import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { getOneProduct } from '../store/actions/product.action';
 
 interface CardProps{
-    item: IProduct;
+    item: IProduct,
+    API:string,
     setShowModal(showModal:boolean):void
 };
 
-const Card = ({item, setShowModal} :CardProps):JSX.Element => {
+const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
     const dispatch=useAppDispatch()
     // ! Here will be data from firebases
     const user:string = 'admin'
 
     const goToEdit = (id:string):void => {
-        getOneProduct(dispatch, DRINKS_API, id)
+        getOneProduct(dispatch, API, id)
         setShowModal(true)
         const html = document.querySelector('html');
         if (html) {

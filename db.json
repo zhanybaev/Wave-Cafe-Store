@@ -71,25 +71,9 @@
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/438/448/small/espresso-coffee-cutout-free-png.png",
       "description": "As a beverage, espresso is a concentrated form of coffee brewed with high pressure, hot water and finely ground coffee beans. Espresso is thicker than regular coffee and has a layer of “crema” on top, which results from air bubbles mixing with the coffee's oils",
       "id": "fc022912-c4f0-4602-ab95-c6db7de44a55"
-    },
-    {
-      "title": "Test",
-      "type": "Hot Coffee",
-      "price": 7897,
-      "image": "jkhkjhkewqeqw",
-      "description": "eqwewqewqeqw",
-      "id": "38a2c369-0298-4df1-aac8-a2c657986556"
     }
   ],
   "special-items": [
-    {
-      "title": "jjkl",
-      "type": "Fruit Juice",
-      "price": 7897,
-      "image": "jkhkjhk",
-      "description": "hkjhkj",
-      "id": "38a2c369-0298-4df1-aac8-a2c657986556"
-    },
     {
       "title": "Croissant",
       "type": "Special Item",

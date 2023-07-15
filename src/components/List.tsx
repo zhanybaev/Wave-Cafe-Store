@@ -7,7 +7,7 @@ import Modal from '../components/Modal'
 
 interface IListProps{
     products: IProduct[],
-    API:string
+    API:string,
 }
 
 const List = ({products, API}:IListProps) => {
@@ -21,7 +21,7 @@ const List = ({products, API}:IListProps) => {
     return ( 
         <section className='list' >
             {products.map((item) =>(
-                <Card setShowModal={setShowModal} key={item.id} item={item} />
+                <Card API={API} setShowModal={setShowModal} key={item.id} item={item} />
             ))}
             <Modal setShowModal={setShowModal} showModal={showModal} />
         </section >

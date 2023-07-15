@@ -8,8 +8,6 @@ const sandwichIcon = require('../assets/icons/sandwich-svgrepo-com.svg')
 
 const SpecialItems = () => {
     const products = useAppSelector(state=>state.product.products)
-    console.log(products);
-    
     const user:string = 'admin'
     
     return (
