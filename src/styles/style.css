@@ -1322,6 +1322,11 @@ nav .active, .nav__item:hover {
   src: url(../assets/fonts/EBCorp-MediumOblique.ttf);
 }
 
+.authForm {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
+
 .authForm .btn {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
