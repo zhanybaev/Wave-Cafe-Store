@@ -1506,6 +1506,13 @@ nav .active, .nav__item:hover {
   color: #099;
 }
 
+.authForm .error-text {
+  color: red;
+  font-size: 18px;
+  display: block;
+  min-height: 10px;
+}
+
 .authForm .section {
   position: relative;
   width: 100%;

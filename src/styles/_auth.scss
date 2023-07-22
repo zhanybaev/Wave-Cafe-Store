@@ -133,6 +133,12 @@
 			color: $green;
 		}
 	}
+	.error-text{
+		color: red;
+		font-size: 18px;
+		display: block;
+		min-height: 10px;
+	}
 	.section{
 	  position: relative;
 	  width: 100%;

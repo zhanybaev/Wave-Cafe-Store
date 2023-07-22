@@ -1,13 +1,15 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { Dispatch } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { getAllProducts } from '../store/actions/product.action';
 import { IProduct } from '../types/productTypes'
 import { signIn } from "../store/actions/auth.action";
 import { IUser } from "../types/userTypes";
+import { app } from "../fire";
 
-const signUp = (dispatch:Dispatch, email:string, password:string, userName?:string) =>{
-    const auth = getAuth();
+const auth = app.auth();
+
+export const signUp = (dispatch:Dispatch, email:string, password:string) =>{
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         console.log(userCredential);
@@ -20,7 +22,25 @@ const signUp = (dispatch:Dispatch, email:string, password:string, userName?:stri
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
     });
+}
+
+export const logIn = (dispatch:Dispatch, email:string, password:string) => {
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        console.log(userCredential);
+        const user:IUser = {
+            userName: `user ${email}`,
+            email:email
+        }
+        signIn(dispatch, user)
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+  });
 }
 
 
