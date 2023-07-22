@@ -3,31 +3,37 @@ import { logIn, signUp } from "../utils/functions";
 import { useDispatch } from "react-redux";
 import { setError } from "../store/actions/auth.action";
 import { useAppSelector } from "../store";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
 	const [isLogin, setIslogin] = useState(true)
 	const error = useAppSelector(state=>state.auth.error)
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	
 	const loginEmailRef = useRef<HTMLInputElement>(null)
 	const loginPasswordRef = useRef<HTMLInputElement>(null)
 	const signupEmailRef = useRef<HTMLInputElement>(null)
 	const signupPasswordRef = useRef<HTMLInputElement>(null)
 	
-	const handleCheckBox=()=>setIslogin(prev=>!prev)
+	const cleanErrors = ()=>setError(dispatch, '')
 
+	const handleCheckBox=()=>{
+		setIslogin(prev=>!prev)
+		cleanErrors()
+	}
 	const sumbit = (e:React.FormEvent) =>{
 		e.preventDefault()
 		if(isLogin){
 			if(loginEmailRef.current?.value && loginPasswordRef.current?.value ){
-				logIn(dispatch, loginEmailRef.current.value, loginPasswordRef.current.value)
+				logIn(dispatch, loginEmailRef.current.value, loginPasswordRef.current.value, navigate)
 				return;
 			}
 			setError(dispatch, 'Please fill in all fields')
 			return;
 		}
 		if(signupEmailRef.current?.value && signupPasswordRef.current?.value){
-			signUp(dispatch, signupEmailRef.current.value, signupPasswordRef.current?.value)
+			signUp(dispatch, signupEmailRef.current.value, signupPasswordRef.current?.value, navigate)
 			return;
 		}
 		setError(dispatch, 'Please fill in all fields')
@@ -38,7 +44,7 @@ const Auth = () => {
         <div className="section authForm">
 		<div className="container">
 			<div className="row full-height justify-content-center">
-				<div className="col-12 text-center align-self-center py-5">
+				<div className="col-12 text-center align-self-center">
 					<div className="section pb-5 pt-5 pt-sm-2 text-center">
 						<div className="controlBar">
 							<h6><span>Log In </span><span>Sign Up</span></h6>
@@ -55,7 +61,7 @@ const Auth = () => {
 								<div className="card-front">
 									<div className="center-wrap">
 										<div className="section text-center">
-											<h4 className="mb-4 pb-3">Log In</h4>
+											<h4>Log In</h4>
 											<span className="error-text">{error}</span>
 											<form onSubmit={sumbit}>
 												<div className="form-group">
