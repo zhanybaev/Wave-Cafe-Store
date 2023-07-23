@@ -1,6 +1,6 @@
-import { useAppDispatch } from '../store';
+import { useAppDispatch, useAppSelector } from '../store';
 import { IProduct } from '../types/productTypes';
-import { deleteProduct } from '../utils/functions';
+import { checkAdmin, deleteProduct } from '../utils/functions';
 import { DRINKS_API } from '../utils/consts';
 import CartButton from './CartButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +15,8 @@ interface CardProps{
 
 const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
     const dispatch=useAppDispatch()
-    // ! Here will be data from firebases
-    const user:string = 'admin'
+    const user = useAppSelector(state=>state.auth.user)
+    const admin = checkAdmin(user?.email || '')
 
     const goToEdit = (id:string):void => {
         getOneProduct(dispatch, API, id)
@@ -29,7 +29,7 @@ const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
 
     return (
         <div key={item.id} className="card">
-            <img className="card__image" src={item.image} alt="coffee" />
+            <img className="card__image" loading='lazy' src={item.image} alt="coffee" />
             <div className="productInfo">
                 <div className="card__title" style={{display:'flex'}}>
                     <h3>{item.title}</h3>
@@ -38,7 +38,7 @@ const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
                 <div className="description">
                     <p>{item.description} </p>
                     <div className="action">
-                        { user === 'admin' 
+                        { admin
                             ? 
                                 <>
                                     <button className="action-btn" onClick={()=>deleteProduct(item.id, DRINKS_API, dispatch)}>
@@ -50,10 +50,10 @@ const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
                                         <span>Edit</span>
                                     </button>
                                 </>
-                            :
-                                <>
-                                    <CartButton />
-                                </>
+                            : 
+                            <>
+                                { user?.email ? <CartButton /> : <></>}
+                            </>
                         }
                     </div>
                 </div>

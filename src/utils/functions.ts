@@ -1,9 +1,9 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { Dispatch } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { getAllProducts } from '../store/actions/product.action';
 import { IProduct } from '../types/productTypes'
-import { setError, signIn } from "../store/actions/auth.action";
+import { logOut, setError, signIn } from "../store/actions/auth.action";
 import { IUser } from "../types/userTypes";
 import { app } from "../fire";
 
@@ -49,6 +49,30 @@ export const logIn = (dispatch:Dispatch, email:string, password:string, navigate
   });
 }
 
+export const handleSignOut = (dispatch:Dispatch)=>{
+    signOut(auth)
+    .then(()=>{
+        logOut(dispatch)
+    })
+} 
+
+export const authListener = (dispatch:Dispatch) => {
+    onAuthStateChanged(auth, (user)=>{
+        if(user?.email){
+            const userObj:IUser = {
+                userName: user.email,
+                email: user.email
+            }
+            signIn(dispatch, userObj)
+            return;
+        }
+        if(!user)logOut(dispatch);
+    })
+}
+
+export const checkAdmin = (email:string)=>{
+    return email===process.env.REACT_APP_ADMIN
+}
 
 export const addProduct = async(product:IProduct, API:string, dispatch:Dispatch)=>{
     await axios.post(API, product);

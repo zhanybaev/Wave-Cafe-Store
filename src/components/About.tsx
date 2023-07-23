@@ -7,7 +7,7 @@ const About = () => {
             <div className='aboutUs__block1'>
                 <h2>About Wave Cafe</h2>
                 <div className='block1__content'>
-                    <img src={aboutImg1} alt="Barista" />
+                    <img loading="lazy" src={aboutImg1} alt="Barista" />
                     <div className="block1__content-text">
                         <p>
                             Wave Cafe is a one-page video background HTML CSS template from Tooplate. You can use this for your business websites.
@@ -26,7 +26,7 @@ const About = () => {
                             If you wish to support us, please contact Tooplate. Thank you. Duis bibendum erat nec ipsum consectetur sodales.
                         </p>
                     </div>
-                    <img src={aboutImg2} alt="Coffee" />
+                    <img loading='lazy' src={aboutImg2} alt="Coffee" />
                 </div>
                 <p>
                     Donec non urna elit. Quisque ut magna in dui mattis iaculis eu finibus metus. Suspendisse vel mi a lacus finibus vehicula vel ut diam. Nam pellentesque, mi quis ullamcorper.

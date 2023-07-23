@@ -4,16 +4,18 @@ import { SPECIAL_ITEMS_API } from '../utils/consts';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { checkAdmin } from '../utils/functions';
 const sandwichIcon = require('../assets/icons/sandwich-svgrepo-com.svg') 
 
 const SpecialItems = () => {
     const products = useAppSelector(state=>state.product.products)
-    const user:string = 'admin'
+    const user = useAppSelector(state=>state.auth.user)
+    const admin = checkAdmin(user?.email || '')
     
     return (
         <section className='menu'>
             {
-                user==='admin' ? 
+                admin ? 
                     <div className='navAdd' >
                     <Link to="/add">
                         <div className="icons">

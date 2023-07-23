@@ -6,20 +6,23 @@ import FilterBar from './FilterBar';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { checkAdmin } from '../utils/functions';
 const coffeeIcon = require('../assets/images/coffee-pot.svg') 
 
 const Menu = () => {
     const products = useAppSelector(state=>state.product.products)
-    const [type, setType] = useState('Iced Coffee')
-    const user:string = 'admin'
-    
+    const user = useAppSelector(state=>state.auth.user)
+    const [type, setType] = useState('Iced Coffee')    
+
+    const admin = checkAdmin(user?.email || '') 
+
     const filteredProducts = products.filter(item=>{
         return item.type===type
     })
     return (
         <section className='menu'>
             {
-                user==='admin' ? 
+                admin ? 
                     <div className='navAdd' >
                     <Link to="/add">
                         <div className="icons">

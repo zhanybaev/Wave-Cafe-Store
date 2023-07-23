@@ -1,8 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faComments, faMartiniGlass, faMugHot, faMugSaucer, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faCartShopping, faComments, faMartiniGlass, faMugHot, faMugSaucer, faRightFromBracket, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import { useAppSelector } from "../store";
+import { useDispatch } from "react-redux";
+import { handleSignOut } from "../utils/functions";
 
 const Navbar = () => {
+    const user = useAppSelector(state=>state.auth.user)
+    const dispatch = useDispatch()
+
+    const goToAuth = ()=>{
+        if(user) handleSignOut(dispatch)
+    }
+
     return (
         <nav>
             <header>
@@ -39,11 +49,23 @@ const Navbar = () => {
                     Cart
                 </span>
             </NavLink>
-            <NavLink className='nav__item' to="/auth">
-                <FontAwesomeIcon className="nav__icon" icon={faCartShopping} />
-                <span>
-                    Login
-                </span>
+            <NavLink onClick={goToAuth} className='nav__item' to="/auth">
+                {user ? (
+                        <>
+                            <FontAwesomeIcon className="nav__icon" icon={faRightFromBracket} />
+                            <span>
+                                Log out
+                            </span>
+                        </>
+                    ): (
+                        <>
+                            <FontAwesomeIcon className="nav__icon" icon={faAt} />
+                            <span>
+                                Log in
+                            </span>
+                        </>
+                    )
+                }
             </NavLink>
         </nav>
     );
