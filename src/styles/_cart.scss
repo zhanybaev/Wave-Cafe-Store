@@ -1,0 +1,139 @@
+@import 'consts';
+
+.cart{
+    animation: fade-in 1s;
+}
+
+.cart__text{
+    padding: 45px 50px;
+    color: white;
+    background: $transparent;
+    h2{
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        color: $aqua;
+        font-size: 29px;
+        margin-bottom: 22.410px;
+    }
+    p{
+        line-height: 32.4px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+.cart__list{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: $transparent;
+    padding: 10px;
+    h5{
+        font-size: 22px;
+        color: white;
+        margin-left: 10px;
+    }
+}
+
+.cartProducts{
+    display: flex;
+    flex-direction: column;
+    hr{
+        border: none;
+        height: 1px;
+        color: #adafb5;
+        background-color: #adafb5;
+        margin: 15px 0;
+    }
+    .product{
+        display: flex;
+        gap: 20px;
+    }
+    img{
+        width: 150px;
+    }
+    .product__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: calc(100% - 170px);
+    }
+    .info, .product-control{
+        display: flex;
+        justify-content: space-between;
+    }
+    h6{
+        font-size: 18px;
+        color: white;
+        font-weight: 700;
+    }
+    .line{
+        width: 1px;
+        display: inline-block;
+        height: 15px;
+        margin: 0 10px;
+        background: #adafb5;
+    }
+    .info__price{
+        color: #adafb5;       
+    }
+    .info__inStock{
+        font-weight: bold;
+        color: #6acc38;
+    }
+    .main{
+        div{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .totalProductPrice{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    .quantity{
+        width: 120px;
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 35px;
+        *{
+            width: 33%;
+            background: white;
+            border: none;
+            height: 100%;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+            text-align: center;
+            font-size: 16px;
+        }
+        button{
+            color: #5f6063;
+            font-weight: bold;
+        }
+        button.plus{
+            border-radius: 5px 0 0 5px;
+        }
+        button.minus{
+            border-radius: 0 5px 5px 0;
+            font-size: 17px;
+        }
+    }
+    .deleteFromCart{
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+}
