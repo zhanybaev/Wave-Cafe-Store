@@ -2,6 +2,9 @@
 
 .cart{
     animation: fade-in 1s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .cart__text{
@@ -22,11 +25,10 @@
 }
 
 .cart__list{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     background: $transparent;
-    padding: 10px;
+    padding: 10px 10px 40px 10px;
     h5{
         font-size: 22px;
         color: white;
@@ -85,6 +87,7 @@
         div{
             display: flex;
             align-items: center;
+            margin-top: 5px;
         }
     }
     .totalProductPrice{
@@ -119,11 +122,12 @@
             font-weight: bold;
         }
         button.plus{
-            border-radius: 5px 0 0 5px;
-        }
-        button.minus{
             border-radius: 0 5px 5px 0;
             font-size: 17px;
+        }
+        button.minus{
+            border-radius: 5px 0 0 5px;
+            font-size: 14px;
         }
     }
     .deleteFromCart{
@@ -135,5 +139,156 @@
         background: transparent;
         color: white;
         font-size: 18px;
+    }
+}
+
+.pricing{
+    background-color: $transparent;
+    align-self: end;
+    padding: 15px;
+    width: 70%;
+    h6{
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.pricing__date{
+    margin-top: 10px;
+    .switch-field {
+        display: flex;
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+    .switch-field input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+    }
+    .switch-field label {
+        background-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 5px solid #e4e4e4;
+        font-weight: bold;
+        transition: all 0.1s ease-in-out;
+        color: #5f6063;
+    }
+    
+    .switch-field label:hover {
+        cursor: pointer;
+    }
+    
+    .switch-field input:checked + label {
+        background-color: white;
+        box-shadow: none;
+        transition: 0.55s;
+        color: black;
+    }
+    
+    .switch-field label:first-of-type {
+        border-radius: 4px 0 0 4px;
+    }
+    
+    .switch-field label:last-of-type {
+        border-radius: 0 4px 4px 0;
+    }
+    span{
+        font-weight: 600;
+        color: white;
+    }
+}
+
+.pricing__promocode{
+    margin-top: 20px;
+    form{
+        display: flex;
+        width: 100%;
+        height: 40px;
+    }
+    input{
+        width: calc(100% - 100px);
+        border: none;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px 10px 10px 20px;
+    }
+    input::placeholder, button{
+        font-weight: 600;
+        font-size: 15px;
+    }
+    button{
+        width: 100px;
+        border-radius: 7px;
+        border: none;
+        margin-left: -5px;
+        cursor: pointer;
+    }
+    p{
+        color: #e4e4e4;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}
+
+.pricing__subtotal{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 5px;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+    span{
+        color: #e4e4e4;
+    }
+    .subtotal span{
+        font-size: 19px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+.pricing__total{
+    margin-left: 5px;
+    margin-top: 10px;
+    div{
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.pricing__action{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    button{
+        width: 98%;
+        height: 35px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        color: $green;
+        background: white;
+        border: none;
+        transition: .5s
+    }
+    button:hover{
+        color: white;
+        background-color: $green;
     }
 }

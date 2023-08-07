@@ -1,7 +1,8 @@
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CartProduct from "./CartProduct.Card";
 
 const Cart = () => {
+    const deliveryDate = `${new Date(Date.now())}`
+    
     return (
         <section className="cart">
             <div className="cart__text">
@@ -14,35 +15,54 @@ const Cart = () => {
                 <h5>Cart</h5>
                 <div className="cartProducts">
                     <hr />
-                    <div className="product">
-                        <img loading="lazy" src="https://static.vecteezy.com/system/resources/previews/000/340/838/original/vector-cup-of-coffee-on-glass-table-on-white-background.jpg" alt="coffee" />
-                        <div className="product__description">
-                            <div className="info">
-                                <div className="main">
-                                    <h6>Coffee Latte</h6>
-                                    <div>
-                                        <span className="info__price">10$</span>
-                                        <span className="line"></span>
-                                        <span className="info__inStock">In Stock</span>
-                                    </div>
-                                </div>
-                                <p className="totalProductPrice">
-                                    119$
-                                </p>
-                            </div>
-                            <div className="product-control">
-                                <div className="quantity" >
-                                    <button className="plus">—</button>
-                                    <input className="quantityInp" defaultValue={1} min={1} type="number" />
-                                    <button className="minus">+</button>
-                                </div>
-                                <button className="deleteFromCart" >
-                                    <FontAwesomeIcon icon={faTrash} />
-                                    Delete
-                                </button>
-                            </div>
-                        </div>
+                    <CartProduct/>
+                </div>
+            </div>
+            <div className="pricing">
+                <h6>Delivery</h6>
+                <div className="pricing__date">
+                    <div className="switch-field">
+                        <input type="radio" id="radio-one" name="switch-one" checked />
+                        <label htmlFor="radio-one">Free</label>
+                        <input type="radio" id="radio-two" name="switch-one"/>
+                        <label htmlFor="radio-two">Express:$9.99</label>
                     </div>
+                    <span>Delivery date: {deliveryDate}</span>
+                </div>
+                <div className="pricing__promocode">
+                    <form>
+                        <input placeholder="Promocode" />
+                        <button type="submit" >Apply</button>
+                    </form>
+                    <p>20% off discount</p>
+                </div>
+                <div className="pricing__subtotal">
+                    <div className="subtotal">
+                        <span>Subtotal</span>
+                        <span>$90.96</span>
+                    </div>
+                    <div className="discount">
+                        <span>Discount</span>
+                        <span>(20%) - $16.19</span>
+                    </div>
+                    <div className="delivery">
+                        <span>Delivery</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div className="tax">
+                        <span>Tax</span>
+                        <span>+ $14.00</span>
+                    </div>
+                </div>
+                <div className="pricing__total">
+                    <div>
+                        <span>Total</span>
+                        <span>$78.76</span>
+                    </div>
+                </div>
+                <div className="pricing__action">
+                    <button>Proceed to checkout</button>
+                    <button>Continue shopping</button>
                 </div>
             </div>
         </section>

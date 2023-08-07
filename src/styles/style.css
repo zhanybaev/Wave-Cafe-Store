@@ -1859,6 +1859,14 @@ nav .active, .nav__item:hover {
 .cart {
   -webkit-animation: fade-in 1s;
           animation: fade-in 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 
 .cart__text {
@@ -1881,7 +1889,6 @@ nav .active, .nav__item:hover {
 }
 
 .cart__list {
-  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1890,7 +1897,7 @@ nav .active, .nav__item:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   background: rgba(0, 0, 0, 0.615);
-  padding: 10px;
+  padding: 10px 10px 40px 10px;
 }
 
 .cart__list h5 {
@@ -1982,6 +1989,7 @@ nav .active, .nav__item:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
 }
 
 .cartProducts .totalProductPrice {
@@ -2023,12 +2031,13 @@ nav .active, .nav__item:hover {
 }
 
 .cartProducts .quantity button.plus {
-  border-radius: 5px 0 0 5px;
+  border-radius: 0 5px 5px 0;
+  font-size: 17px;
 }
 
 .cartProducts .quantity button.minus {
-  border-radius: 0 5px 5px 0;
-  font-size: 17px;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
 }
 
 .cartProducts .deleteFromCart {
@@ -2044,5 +2053,217 @@ nav .active, .nav__item:hover {
   background: transparent;
   color: white;
   font-size: 18px;
+}
+
+.pricing {
+  background-color: rgba(0, 0, 0, 0.615);
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding: 15px;
+  width: 70%;
+}
+
+.pricing h6 {
+  font-size: 18px;
+  color: white;
+}
+
+.pricing__date {
+  margin-top: 10px;
+}
+
+.pricing__date .switch-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.pricing__date .switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.pricing__date .switch-field label {
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 5px solid #e4e4e4;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  color: #5f6063;
+}
+
+.pricing__date .switch-field label:hover {
+  cursor: pointer;
+}
+
+.pricing__date .switch-field input:checked + label {
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.55s;
+  transition: 0.55s;
+  color: black;
+}
+
+.pricing__date .switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.pricing__date .switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.pricing__date span {
+  font-weight: 600;
+  color: white;
+}
+
+.pricing__promocode {
+  margin-top: 20px;
+}
+
+.pricing__promocode form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+.pricing__promocode input {
+  width: calc(100% - 100px);
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px 10px 10px 20px;
+}
+
+.pricing__promocode input::-webkit-input-placeholder, .pricing__promocode button {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.pricing__promocode input:-ms-input-placeholder, .pricing__promocode button {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.pricing__promocode input::-ms-input-placeholder, .pricing__promocode button {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.pricing__promocode input::placeholder, .pricing__promocode button {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.pricing__promocode button {
+  width: 100px;
+  border-radius: 7px;
+  border: none;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+.pricing__promocode p {
+  color: #e4e4e4;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.pricing__subtotal {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-left: 5px;
+}
+
+.pricing__subtotal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pricing__subtotal span {
+  color: #e4e4e4;
+}
+
+.pricing__subtotal .subtotal span {
+  font-size: 19px;
+  font-weight: 600;
+  color: white;
+}
+
+.pricing__total {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.pricing__total div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.pricing__action {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.pricing__action button {
+  width: 98%;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #099;
+  background: white;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.pricing__action button:hover {
+  color: white;
+  background-color: #099;
 }
 /*# sourceMappingURL=style.css.map */
