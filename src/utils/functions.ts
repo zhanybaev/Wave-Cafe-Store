@@ -88,3 +88,12 @@ export const editProduct = async (id:string, API:string, updatedProduct:IProduct
     await axios.patch(`${API}/${id}`, updatedProduct)
     await getAllProducts(dispatch, API)
 }
+
+export const getDeliveryDate = () =>{
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const date = new Date()
+    const month = monthNames[date.getMonth()]
+    const day = date.getDate() + 1
+    const year = date.getFullYear()
+    return `${day} ${month} ${year}`
+}

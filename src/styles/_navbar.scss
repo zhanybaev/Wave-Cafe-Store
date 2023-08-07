@@ -87,3 +87,15 @@ nav .active, .nav__item:hover{
         font-size: 41.6px;
     }
 }
+
+@media screen and (max-width:380px){
+    nav header{
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:300px){
+    .nav__item{
+        min-width: 220px;
+    }
+}

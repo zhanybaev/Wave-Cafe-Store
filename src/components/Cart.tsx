@@ -1,8 +1,9 @@
+import { getDeliveryDate } from "../utils/functions";
 import CartProduct from "./CartProduct.Card";
 
 const Cart = () => {
-    const deliveryDate = `${new Date(Date.now())}`
-    
+    const deliveryDate = getDeliveryDate()
+
     return (
         <section className="cart">
             <div className="cart__text">
@@ -14,6 +15,8 @@ const Cart = () => {
             <div className="cart__list">
                 <h5>Cart</h5>
                 <div className="cartProducts">
+                    <hr />
+                    <CartProduct/>
                     <hr />
                     <CartProduct/>
                 </div>
@@ -29,6 +32,7 @@ const Cart = () => {
                     </div>
                     <span>Delivery date: {deliveryDate}</span>
                 </div>
+                <div className="border"></div>
                 <div className="pricing__promocode">
                     <form>
                         <input placeholder="Promocode" />
@@ -36,6 +40,7 @@ const Cart = () => {
                     </form>
                     <p>20% off discount</p>
                 </div>
+                <div className="border"></div>
                 <div className="pricing__subtotal">
                     <div className="subtotal">
                         <span>Subtotal</span>
@@ -54,6 +59,7 @@ const Cart = () => {
                         <span>+ $14.00</span>
                     </div>
                 </div>
+                <div className="border"></div>
                 <div className="pricing__total">
                     <div>
                         <span>Total</span>
