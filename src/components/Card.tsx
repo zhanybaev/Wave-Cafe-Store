@@ -52,7 +52,7 @@ const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
                                 </>
                             : 
                             <>
-                                { user?.email ? <CartButton /> : <></>}
+                                { user?.email ? <CartButton item={item} /> : <></>}
                             </>
                         }
                     </div>

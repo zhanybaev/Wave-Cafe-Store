@@ -6,6 +6,7 @@ import { IProduct } from '../types/productTypes'
 import { logOut, setError, signIn } from "../store/actions/auth.action";
 import { IUser } from "../types/userTypes";
 import { app } from "../fire";
+import { ICartProduct } from "../types/cartTypes";
 
 const auth = app.auth();
 
@@ -96,4 +97,22 @@ export const getDeliveryDate = () =>{
     const day = date.getDate() + 1
     const year = date.getFullYear()
     return `${day} ${month} ${year}`
+}
+
+export const checkInCart = (productItem:IProduct)=>{
+    let cart = JSON.parse(localStorage.getItem("Wave Cafe cart") || "false");
+    if(!cart)return false
+    return !(cart.products.every((elem:ICartProduct)=>elem.item.id !== productItem.id))
+}
+
+export function calcSubPrice(product:ICartProduct) {
+    return product.count * product.item.price;
+}
+
+export function calcTotalPrice(products:ICartProduct[]) {
+    let totalPrice = 0;
+    products.forEach((item) => {
+      totalPrice += item.subPrice;
+    });
+    return totalPrice;
 }
