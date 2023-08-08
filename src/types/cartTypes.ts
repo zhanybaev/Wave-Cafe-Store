@@ -1,7 +1,7 @@
 import { IProduct } from "./productTypes"
 
 export interface ICart{
-    products:ICartProduct[],
+    products:Array<ICartProduct> | [],
     totalPrice:number
 }
 

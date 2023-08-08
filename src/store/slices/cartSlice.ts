@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit"
 import { ICart } from "../../types/cartTypes"
 
 interface ICartState{
-    cart:ICart | {}
+    cart:ICart | null
 }
 
 const initialState:ICartState={
-    cart:{}
+    cart:null
 }
 
 export const CartSlice=createSlice({

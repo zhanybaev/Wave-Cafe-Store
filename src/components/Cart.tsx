@@ -1,9 +1,21 @@
+import { useEffect } from "react";
+import { useAppSelector } from "../store";
 import { getDeliveryDate } from "../utils/functions";
 import CartProduct from "./CartProduct.Card";
+import { getCartProducts } from "../store/actions/cart.action";
+import { useDispatch } from "react-redux";
 
 const Cart = () => {
     const deliveryDate = getDeliveryDate()
+    const cartProducts = useAppSelector(state=>state.cart)
+    const taxPrice = 14
+    const totalPrice = (cartProducts.cart?.totalPrice || 0) + taxPrice
+    const dispatch = useDispatch()
 
+    useEffect(()=>{
+        getCartProducts(dispatch)
+    }, [])
+    
     return (
         <section className="cart">
             <div className="cart__text">
@@ -15,10 +27,14 @@ const Cart = () => {
             <div className="cart__list">
                 <h5>Cart</h5>
                 <div className="cartProducts">
-                    <hr />
-                    <CartProduct/>
-                    <hr />
-                    <CartProduct/>
+                    {
+                        cartProducts.cart?.products.map((item)=>(
+                            <>
+                                <hr />
+                                <CartProduct product={item} />                            
+                            </>
+                    ))
+                    }
                 </div>
             </div>
             <div className="pricing">
@@ -44,7 +60,7 @@ const Cart = () => {
                 <div className="pricing__subtotal">
                     <div className="subtotal">
                         <span>Subtotal</span>
-                        <span>$90.96</span>
+                        <span>${cartProducts.cart?.totalPrice}</span>
                     </div>
                     <div className="discount">
                         <span>Discount</span>
@@ -56,14 +72,14 @@ const Cart = () => {
                     </div>
                     <div className="tax">
                         <span>Tax</span>
-                        <span>+ $14.00</span>
+                        <span>+ ${taxPrice}</span>
                     </div>
                 </div>
                 <div className="border"></div>
                 <div className="pricing__total">
                     <div>
                         <span>Total</span>
-                        <span>$78.76</span>
+                        <span>${totalPrice}</span>
                     </div>
                 </div>
                 <div className="pricing__action">
