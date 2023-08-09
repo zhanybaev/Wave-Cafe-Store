@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../store';
+import { useAppDispatch, useAppSelector } from '../store';
 import { getAllProducts } from '../store/actions/product.action';
 import { IProduct } from '../types/productTypes';
 import Card from './Card';
 import Modal from '../components/Modal'
+import Warning from './Warning';
 
 interface IListProps{
     products: IProduct[],
@@ -11,8 +12,11 @@ interface IListProps{
 }
 
 const List = ({products, API}:IListProps) => {
+    const { error, loading } = useAppSelector(state=>state.product)
     const dispatch=useAppDispatch()
     const [showModal, setShowModal]=useState(false)
+    
+    console.log(loading, 'loading');
     
     useEffect(()=>{
         getAllProducts(dispatch, API)
@@ -20,9 +24,12 @@ const List = ({products, API}:IListProps) => {
 
     return ( 
         <section className='list' >
-            {products.map((item) =>(
-                <Card API={API} setShowModal={setShowModal} key={item.id} item={item} />
-            ))}
+            {
+                error ? <Warning message={error} /> : null
+            }
+            {
+                loading ? <Warning message='Loading...'/> : products.map(item=> <Card API={API} setShowModal={setShowModal} key={item.id} item={item}/>)
+            }
             <Modal setShowModal={setShowModal} showModal={showModal} />
         </section >
     );

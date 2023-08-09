@@ -33,6 +33,11 @@
 .list{
     width: 100%;
     animation: fade-in 1s;
+    position: relative;
+    min-height: 200px;
+    h2{
+        color: white;
+    }
 }
 
 @keyframes fade-in {

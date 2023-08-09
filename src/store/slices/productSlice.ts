@@ -3,7 +3,9 @@ import { IProduct } from "../../types/productTypes"
 
 interface ProductState{
     products:IProduct[],
-    product:IProduct
+    product:IProduct,
+    error: string | null,
+    loading: boolean
 }
 
 const initialState:ProductState={
@@ -15,7 +17,9 @@ const initialState:ProductState={
         description:'',
         price: 0,
         type:''
-    }
+    },
+    error:null,
+    loading:true
 }
 
 export const ProductSlice=createSlice({
@@ -25,16 +29,34 @@ export const ProductSlice=createSlice({
         getProducts:(state, action)=>{
             return {
                 ...state, 
-                products: action.payload
+                products: action.payload,
+                error:'',
+                loading:false
             }
         },
         getProduct:(state, action)=>{
             return {
                 ...state,
-                product: action.payload
+                product: action.payload,
+                error:'',
+                loading:false
+            }
+        },
+        setError:(state, action)=>{
+            return {
+                ...state,
+                error: action.payload,
+                loading:false,
+                products:[]
+            }
+        },
+        setLoading:(state, action)=>{
+            return {
+                ...state,
+                loading: action.payload
             }
         }
     }
 })
 export default ProductSlice.reducer;
-export const { getProducts, getProduct }=ProductSlice.actions
+export const { getProducts, getProduct, setError, setLoading }=ProductSlice.actions

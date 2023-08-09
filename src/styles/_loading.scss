@@ -1,0 +1,54 @@
+.loadingCircle {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    .circle {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      background: rgba(15, 196, 241, 0.02);
+      &:nth-of-type(1) {
+        width: 200px;
+        height: 180px;
+        animation: rt 6s infinite linear;
+        box-shadow: 0 0 1px 0 aqua,
+                    inset 0 0 10px 0 aqua;
+      }
+      &:nth-of-type(2) {
+        width: 180px;
+        height: 200px;
+        animation: rt 10s infinite linear;
+        box-shadow: 0 0 1px 0 rgb(125, 255, 255),
+                    inset 0 0 10px 0 rgb(125, 255, 255);
+      }
+      &:nth-of-type(3) {
+        width: 210px;
+        height: 190px;
+        animation: rt 5s infinite linear;
+        box-shadow: 0 0 1px 0 rgb(19, 153, 153),
+                    inset 0 0 10px 0 rgb(19, 153, 153);
+      }
+      &:nth-of-type(4) {
+        width: 190px;
+        height: 210px;
+        animation: rt 15s infinite linear;
+        box-shadow: 0 0 1px 0 rgb(68, 121, 121),
+                    inset 0 0 10px 0 rgb(68, 121, 121);
+      }
+    }
+  }
+  
+  @keyframes rt {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
