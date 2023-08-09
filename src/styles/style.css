@@ -2284,6 +2284,42 @@ nav .active, .nav__item:hover {
   background-color: #099;
 }
 
+.cart__notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.615);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  min-height: 200px;
+}
+
+.cart__notification svg {
+  height: 50px;
+}
+
+.cart__notification h2 {
+  margin-top: 20px;
+}
+
+.cart__notification h4 {
+  margin-top: 10px;
+}
+
+.cart__notification a {
+  color: #3CC;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 576px) {
   .pricing {
     -ms-flex-item-align: center;

@@ -290,6 +290,29 @@
     }
 }
 
+.cart__notification{
+    display: flex;
+    flex-direction: column;
+    background: $transparent;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 200px;
+    svg{
+        height: 50px;
+    }
+    h2{
+        margin-top: 20px;
+    }
+    h4{
+        margin-top: 10px;
+    }
+    a{
+        color: $aqua;
+        text-decoration: underline;
+    }
+}
+
 @media screen and (max-width:576px) {
     .pricing{
         align-self: center;
