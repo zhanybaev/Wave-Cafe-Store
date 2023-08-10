@@ -13,10 +13,8 @@ interface IListProps{
 
 const List = ({products, API}:IListProps) => {
     const { error, loading } = useAppSelector(state=>state.product)
-    const dispatch=useAppDispatch()
     const [showModal, setShowModal]=useState(false)
-    
-    console.log(loading, 'loading');
+    const dispatch=useAppDispatch()
     
     useEffect(()=>{
         getAllProducts(dispatch, API)

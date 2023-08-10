@@ -1,11 +1,10 @@
-
 const Contact = () => {
     return (
         <section className='contact'>
             <div className='contact__text'>
                 <h2>Contact Wave</h2>
                 <p>
-                    Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.
+                    Have a question about our coffee selection or need assistance with your order? Contact us at Wave Cafe and our dedicated team will be happy to help. We look forward to connecting with fellow coffee enthusiasts like you!
                 </p>
             </div>
             <div className='contact__form'>

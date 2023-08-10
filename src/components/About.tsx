@@ -10,10 +10,10 @@ const About = () => {
                     <img loading="lazy" src={aboutImg1} alt="Barista" />
                     <div className="block1__content-text">
                         <p>
-                            Wave Cafe is a one-page video background HTML CSS template from Tooplate. You can use this for your business websites.
+                            Welcome to Wave Cafe, your ultimate destination for exceptional coffee. We are dedicated to sourcing the finest coffee beans from around the world. 
                         </p>
                         <p>
-                            You can also use this for your client websites which you get paid for your website services. Please tell your friends about us.
+                            With a commitment to quality, sustainability, and a seamless customer experience, we invite you to join us on a journey of discovering new flavors and elevating your coffee experience.
                         </p>
                     </div>
                 </div>
@@ -23,13 +23,13 @@ const About = () => {
                     <div>
                         <h2>How we began</h2>
                         <p>
-                            If you wish to support us, please contact Tooplate. Thank you. Duis bibendum erat nec ipsum consectetur sodales.
+                            Wave Cafe began with a simple passion for coffee and a desire to share that passion with others. It all started with a small coffee cart.
                         </p>
                     </div>
                     <img loading='lazy' src={aboutImg2} alt="Coffee" />
                 </div>
                 <p>
-                    Donec non urna elit. Quisque ut magna in dui mattis iaculis eu finibus metus. Suspendisse vel mi a lacus finibus vehicula vel ut diam. Nam pellentesque, mi quis ullamcorper.
+                    As word spread about our exceptional coffee and personalized service, we knew it was time to expand and bring our love for coffee to a wider audience. And so, Wave Cafe was born, offering an online platform for coffee lovers to explore and indulge in the finest coffee beans from around the world.
                 </p>
             </div>
         </section>

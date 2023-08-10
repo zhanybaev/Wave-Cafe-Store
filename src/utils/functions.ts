@@ -15,7 +15,6 @@ type NavigateFunction = (location: string) => void;
 export const signUp = (dispatch:Dispatch, email:string, password:string, navigate:NavigateFunction) =>{
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        console.log(userCredential);
         const user:IUser = {
             userName: `user ${email}`,
             email:email
@@ -34,7 +33,6 @@ export const signUp = (dispatch:Dispatch, email:string, password:string, navigat
 export const logIn = (dispatch:Dispatch, email:string, password:string, navigate:NavigateFunction) => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        console.log(userCredential);
         const user:IUser = {
             userName: `user ${email}`,
             email:email

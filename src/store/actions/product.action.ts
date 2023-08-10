@@ -8,8 +8,8 @@ export const setFetchError = (dispatch: Dispatch<AnyAction>, message:string) =>{
 }
 
 export const getAllProducts = async (dispatch: Dispatch<AnyAction>, API:string) => {
-    setLoading(true)
     try {
+        dispatch(setLoading(true))
         let res = await axios(API)
         dispatch(getProducts(res.data))
     } catch (error) {
@@ -20,7 +20,7 @@ export const getAllProducts = async (dispatch: Dispatch<AnyAction>, API:string) 
 
 export const getOneProduct = async(dispatch: Dispatch<AnyAction>, API:string,  id:string) => {
     try {
-        setLoading(true)
+        dispatch(setLoading(true))
         let res = await axios(`${API}/${id}`)
         dispatch(getProduct(res.data))
     } catch (error) {

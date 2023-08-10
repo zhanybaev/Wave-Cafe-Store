@@ -19,7 +19,7 @@ const initialState:ProductState={
         type:''
     },
     error:null,
-    loading:true
+    loading:false
 }
 
 export const ProductSlice=createSlice({
