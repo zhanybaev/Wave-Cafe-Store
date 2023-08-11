@@ -1,26 +1,26 @@
 {
   "drinks": [
     {
-      "title": "Strawberry Fresh",
+      "title": "Strawberry Açaí Lemonade",
       "type": "Fruit Juice",
-      "price": 22,
-      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/292/917/small/a-glass-of-juice-with-fruit-ai-generate-photo.jpg",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20221216_FrozenStrawberryAcaiRefresherLemonade.jpg?impolicy=1by1_wide_topcrop_630",
       "description": "Fresh strawberry juice is a delightful and refreshing beverage that captures the sweet and tangy essence of ripe strawberries. Made from luscious, plump strawberries, this vibrant red juice is bursting with natural flavors and nutritional benefits.",
       "id": "111532d1-fcb0-43df-a2b9-5cc5c6592585"
     },
     {
-      "title": "Strawberry Smoothie",
+      "title": "Dragon Drink",
       "type": "Fruit Juice",
-      "price": 12,
-      "image": "https://foodsharingvegan.com/wp-content/uploads/2022/03/Strawberry-Yogurt-Smoothie-Plant-Based-on-a-Budget-1-2.jpg",
-      "description": "This product is a blended mixture of strawberry liquid, yogurt, and ice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20181217_DragonDrink.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "This tropical-inspired pick-me-up—crafted with sweet mango and dragonfruit flavors and hand-shaken with creamy coconutmilk, ice and a scoop of real diced dragonfruit—creates a refreshing and surprising delight in the fall",
       "id": "51348d4c-a5ba-4613-b305-9ba93a220197"
     },
     {
       "title": "Iced Americano",
       "type": "Iced Coffee",
       "price": 15.85,
-      "image": "https://globalassets.starbucks.com/assets/921a409e6f55407da52eee4c8ad13ada.jpg?impolicy=1by1_wide_topcrop_630",
+      "image": "https://www.starbucks.com.au/imagecache/bestfit/620x634/_files/product-images/iced-bev/sbx20190607-32079-icedcaffeamericano-onwhite-corelib-srgb.png",
       "description": "Traditional Iced Americano is made by pouring cold water, over ice followed by shots of espresso. With manual pour over, the coffee drains directly onto the cold water and ice, so it chills during brewing.",
       "id": "80eee3f6-d8e1-4aa7-96f4-e7815d8576e8"
     },
@@ -28,7 +28,7 @@
       "title": "Iced Cappuccino",
       "type": "Iced Coffee",
       "price": 12,
-      "image": "https://static.vecteezy.com/system/resources/previews/022/383/540/non_2x/glasses-of-iced-coffee-drinks-iced-cappuccino-png.png",
+      "image": "https://www.starbucksathome.com/sites/default/files/2022-05/Iced%20Cappuccino%20KV_Long%20Shadow.png",
       "description": "An iced cappuccino is made by layering espresso and foamed milk in a glass of ice. It has a stronger espresso flavor than an iced latte, as it uses less milk in comparison",
       "id": "0edb8bfc-4eb7-4f20-a388-a7450d886d6a"
     },
@@ -44,33 +44,233 @@
       "title": "Iced Latte",
       "type": "Iced Coffee",
       "price": 11,
-      "image": "https://cdn.shopify.com/s/files/1/0033/9148/8089/articles/PISTACHIO_Recipe_Images-25.png?v=1684263869",
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/2021-03/2-IcedLatte_LongShadow_Cream_1.png",
       "description": "The iced latte is the cold relative of the traditional latte and is made up of ice, a shot of espresso and cold milk. Since espresso is an integral part of the iced latte, you'll be needing an espresso machine for this. An iced latte is brewed by pouring espresso over ice and adding frothed milk on top",
       "id": "2b9965a7-58f8-4cb2-9c8f-416de7e105f8"
     },
     {
       "title": "Hot Americano",
       "type": "Hot Coffee",
-      "price": 8,
-      "image": "https://previews.123rf.com/images/pikepicture/pikepicture1803/pikepicture180300012/96531825-coffee-cup-vector-top-view-hot-americano-coffee-espresso-fast-food-cup-beverage-bubbles-white.jpg",
-      "description": "An Americano is an espresso drink made with hot water and espresso, also called a Caffe Americano. The drink can be made with either one or two shots of espresso, and varying ratios of water. Diluting the strong dark espresso roast brings the flavor closer to a drip coffee: which might be where the name originated",
+      "price": 19.89,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/2021-03/3-CaffeAmericano_LongShadow_Cream_1.png",
+      "description": "An Americano is an espresso drink made with hot water and espresso. Diluting the strong dark espresso roast brings the flavor closer to a drip coffee: which might be where the name originated",
       "id": "76f1c1b8-dd7c-4e93-bc6f-fb1e96ddb983"
     },
     {
       "title": "Hot Cappuccino",
       "type": "Hot Coffee",
-      "price": 10,
-      "image": "https://freepngimg.com/thumb/coffee/147498-photos-hot-cappuccino-png-image-high-quality-thumb.png",
+      "price": 18.7,
+      "image": "https://www.starbucksathome.com/sites/default/files/styles/nutrition_instruction_image/public/2021-03/CappuccinoIntro_LongShadow.png?itok=FB-Pr6wx",
       "description": "A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma",
       "id": "2820b257-a533-435c-8731-8a25cc0603e8"
     },
     {
       "title": "Hot Espresso",
       "type": "Hot Coffee",
-      "price": 7,
+      "price": 17.99,
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/438/448/small/espresso-coffee-cutout-free-png.png",
       "description": "As a beverage, espresso is a concentrated form of coffee brewed with high pressure, hot water and finely ground coffee beans. Espresso is thicker than regular coffee and has a layer of “crema” on top, which results from air bubbles mixing with the coffee's oils",
       "id": "fc022912-c4f0-4602-ab95-c6db7de44a55"
+    },
+    {
+      "title": "Café au Lait",
+      "type": "Hot Coffee",
+      "price": 19.5,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/2021-04/10032021_BAB_CAFE_AU_LAIT_LS-min.png",
+      "description": "Café au Lait is a classic coffee drink made with equal parts of brewed coffee and steamed milk, creating a smooth and creamy beverage with a balanced flavor.",
+      "id": "09c43b81-747c-4756-8e31-1ce0af9a4fd5"
+    },
+    {
+      "title": "Iced Almond Latte",
+      "type": "Iced Coffee",
+      "price": 21.75,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2023-02/STARBUCKS-SBU-SBUX_Nespresso%20Flavours_2023-Website_Recipes-Still_IcedAlmondLatte_CS-1842x1542.png?itok=hyrRi6bz",
+      "description": "Iced Almond Latte is a refreshing coffee drink made with espresso, almond milk, and ice, offering a creamy and nutty flavor with a cool and invigorating twist.",
+      "id": "088016db-7db1-458f-97f5-64cc61bfeb3b"
+    },
+    {
+      "title": "Sparkling Mint Espresso",
+      "type": "Iced Coffee",
+      "price": 24.35,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-03/18-SparklingEspressoWithMint_ContactShadow_Green_3.png?itok=pKfPU2cC",
+      "description": "Sparkling Mint Espresso is a unique and refreshing coffee beverage that combines the boldness of espresso with the cooling and invigorating taste of mint, creating a revitalizing and uplifting drink.",
+      "id": "06f8824a-f40e-419c-a99b-d6b95ab952c7"
+    },
+    {
+      "title": "Vanilla Sweet Cream Cold Foam Iced Coffee",
+      "type": "Iced Coffee",
+      "price": 15.45,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2022-08/Sweet%20Cream%20Cold%20Foam%20KV_Contact%20Shadow.png?itok=_YWpXLgb",
+      "description": "Vanilla Sweet Cream Cold Foam Iced Coffee is a creamy and indulgent coffee drink that starts with a smooth and rich iced coffee base. It is then topped with a velvety layer of vanilla sweet cream cold foam, adding a touch of sweetness and a luxurious texture to every sip.",
+      "id": "1cc053c3-cd29-49bc-b6f5-384539ddaef5"
+    },
+    {
+      "title": "Vietnamese Iced coffee",
+      "type": "Iced Coffee",
+      "price": 19.8,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_Vietnamese_CS-min.png?itok=c-WyNsNc",
+      "description": "Vietnamese Iced Coffee is a rich and creamy coffee beverage made by combining strong brewed Vietnamese coffee with sweetened condensed milk and pouring it over ice.",
+      "id": "4d57f5cc-6486-4e88-9600-cd9afc7b8114"
+    },
+    {
+      "title": "Iced Mocha",
+      "type": "Iced Coffee",
+      "price": 16.5,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2022-08/Iced%20Mocha%20KV_Contact%20Shadow.png?itok=8R2_mn_f",
+      "description": "Iced Mocha is a refreshing coffee drink that combines the flavors of chocolate and coffee, made by mixing espresso or strong brewed coffee with milk, chocolate syrup, and ice.",
+      "id": "98184082-06de-49b8-93cd-843bb830c359"
+    },
+    {
+      "title": "Iced Coconut Coffee",
+      "type": "Iced Coffee",
+      "price": 21.85,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/2022-08/Iced%20Coconut%20KV_Short%20Shadow.png",
+      "description": "Iced coconut coffee is a tropical twist on a classic coffee drink, blending the rich and bold flavors of coffee with the sweet and creamy taste of coconut, served over ice for a refreshing treat.",
+      "id": "171db152-bc32-4214-9baf-3a771eabb89e"
+    },
+    {
+      "title": "Iced Honey Oat Coffee",
+      "type": "Iced Coffee",
+      "price": 24.25,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2022-08/Iced%20Honey%20Oat%20Coffee%20KV_Contact%20Shadow.png?itok=czR9wXUo",
+      "description": "Iced Honey Oat Coffee is a delightful combination of smooth coffee, sweet honey, and hearty oats, creating a refreshing and indulgent beverage perfect for any time of day.",
+      "id": "721eb16a-2737-4ba0-8e8a-2f4690f21ec0"
+    },
+    {
+      "title": "Iced Chocolate Almond Espresso",
+      "type": "Iced Coffee",
+      "price": 20.99,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2023-08/STARBUCKS-SBU-SBUX_Dairy_Alt_2022-Website_Recipes-Still_IcedChocAlmond_CS-1842x1542_0.png?itok=boxsBkSa",
+      "description": "Iced Chocolate Almond Espresso is a rich and creamy blend of espresso, decadent chocolate, and the nutty flavor of almonds, resulting in a luxurious and satisfying iced coffee experience.",
+      "id": "b9616580-d9f0-4ccc-ab3f-4ca9c18614a5"
+    },
+    {
+      "title": "Iced Brown Sugar Oat Latte",
+      "type": "Iced Coffee",
+      "price": 20.89,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2023-08/STARBUCKS-SBU-SBUX_Dairy_Alt_2022-Website_Recipes-Still_IcedBrownSugarOat_CS-1842x1542_0.png?itok=uSPswrwJ",
+      "description": "Iced Brown Sugar Oat Latte is a refreshing and indulgent iced coffee made with smooth oat milk, a hint of brown sugar, and a touch of espresso for a sweet and creamy beverage.",
+      "id": "a4bc83f5-d44a-451d-808d-cbd108b279ae"
+    },
+    {
+      "title": "Iced Caramel Macchiato",
+      "type": "Iced Coffee",
+      "price": 23.45,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_IcedCaramel_Work_CS-min.png?itok=WS6VCeJM",
+      "description": "Iced Caramel Macchiato is a refreshing and decadent iced coffee drink. Made with chilled espresso, creamy milk, and a drizzle of caramel syrup, it offers a delightful combination of flavors and textures.",
+      "id": "da26b401-25ad-443d-b0a9-52ad59b5f801"
+    },
+    {
+      "title": "Caffee Mocha",
+      "type": "Hot Coffee",
+      "price": 21.45,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_CafeMocha_CS-min.png?itok=SAcqDnww",
+      "description": "Caffee Mocha is a delicious and indulgent coffee beverage that combines espresso, steamed milk, chocolate syrup, and topped with whipped cream. It offers a perfect balance of rich coffee flavor and sweet chocolate notes, making it a popular choice for coffee lovers with a sweet tooth.",
+      "id": "a40ea16e-53ca-436d-beba-eb4c44331398"
+    },
+    {
+      "title": "Latte Macchiato",
+      "type": "Hot Coffee",
+      "price": 18.5,
+      "image": "https://starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_LATTE_MACCHIATO_CS-min.png?itok=SBjzTC9V",
+      "description": "Latte Macchiato is a creamy and luxurious coffee drink made with layers of steamed milk, espresso, and a dollop of frothed milk on top. With its smooth texture and delicate espresso flavor, it is a popular choice for those who enjoy a milder and more milky coffee experience.",
+      "id": "9db7a78f-1193-4dd8-b2b5-d405d6801435"
+    },
+    {
+      "title": "Spiced Flat White",
+      "type": "Hot Coffee",
+      "price": 17.89,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_SpicedExpresso_CS-min.png?itok=Ss0ri4RZ",
+      "description": "Spiced Flat White is a warm and aromatic coffee beverage that features a double shot of espresso combined with steamed milk and a blend of flavorful spices such as cinnamon, nutmeg, and cloves. It offers a delightful balance of rich coffee taste and subtle spiced undertones.",
+      "id": "1a9d7278-b89c-4a4b-99ae-7eadee473322"
+    },
+    {
+      "title": "Golden Turmeric Latte",
+      "type": "Hot Coffee",
+      "price": 25.99,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2021-04/10032021_GoldenTurmericLatte_CS-min.png?itok=tbHxcLve",
+      "description": "Golden Turmeric Latte is a vibrant and nourishing beverage that combines steamed milk with turmeric, ginger, and other warming spices. Coffee is creamy and golden-hued latte offers a unique flavor profile with a hint of natural sweetness.",
+      "id": "3d93c8eb-b0ab-4509-8495-bbec81eb9241"
+    },
+    {
+      "title": "Salted Caramel Hot Chocolate",
+      "type": "Hot Coffee",
+      "price": 22.89,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2023-02/Starbucks_SBU_Signature%20Chocolate%20Recipes%202022_Website%20Recipe_KV_Salted%20Caramel_CS.png?itok=KU2XfOaj",
+      "description": "Salted Caramel Hot Chocolate is a decadent and indulgent drink that combines rich hot chocolate with a hint of salted caramel flavor. It offers a perfect balance of velvety chocolate and sweet-savory caramel notes.",
+      "id": "a80b35e7-eafa-4c6f-b5da-180d342c3ac3"
+    },
+    {
+      "title": "Toasted Marshmallow Hot Chocolate",
+      "type": "Hot Coffee",
+      "price": 28,
+      "image": "https://www.starbucksathome.com/gb/sites/default/files/styles/rdp_banner_image/public/2023-02/Starbucks_SBU_Signature%20Chocolate%20Recipes%202022_Website%20Recipe_KV_Toasted%20Marshmallow_CS.png?itok=REy37V9g",
+      "description": "Toasted Marshmallow Hot Chocolate is a vibrant and nourishing beverage that gives you the rich flavor of chocolate mixed with  the deep notes of caramelized, vanilla-scented marshmallows.",
+      "id": "072fe346-b162-426c-ac73-9b19be380032"
+    },
+    {
+      "title": "Pineapple Passionfruit",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20211210_PineapplePassionfruitRefreshers.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Tropical flavors of pineapple and passionfruit mix with diced pineapple to create an island escape—oh so refreshing.",
+      "id": "288c7366-96f9-4c63-b94d-78bbd3e28d7d"
+    },
+    {
+      "title": "Paradise Drink",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20211217_ParadiseDrink.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Tropical flavors of pineapple and passionfruit combine with diced pineapple and creamy coconutmilk to create a delicious island escape",
+      "id": "7ad24a5c-6b3e-4547-9e16-47b5eb65136c"
+    },
+    {
+      "title": "Frozen Pineapple Passionfruit Lemonade",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20221216_FrozenPineapplePassionfruitRefresherLemonade.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Tropical flavors of pineapple and passionfruit blended with real diced pineapple, strawberry puree and lemonade for a refreshingly frozen, vibrant escape in a cup",
+      "id": "790b0081-8388-4588-b337-275546632a8d"
+    },
+    {
+      "title": "Frozen Strawberry Açaí Lemonade",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20221216_FrozenStrawberryAcaiRefresherLemonade.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Sweet strawberry flavors and tropical açaí notes blended with real strawberry pieces, strawberry puree and lemonade for a refreshingly frozen, vibrant escape in a cup.",
+      "id": "aa2a66c0-4631-4345-8f64-106591405309"
+    },
+    {
+      "title": "Frozen Mango Dragonfruit Lemonade",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20221216_FrozenMangoDragonfruitRefresherLemonade.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Tropical flavors of sweet mango and dragonfruit blended with real pieces of dragonfruit, strawberry puree and lemonade for a refreshingly frozen, vibrant escape in a cup.",
+      "id": "4c981957-a2a3-4dfe-8da1-f1ece1763e0a"
+    },
+    {
+      "title": "Pink Drink",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/assets/e0cd6e8588b6431d9d6f702bde6ee41c.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Our crisp Strawberry Açaí Refreshers® beverage—with accents of passion fruit and combined with creamy coconutmilk—evokes a fruity and refreshing sip of spring, no matter what time of year.",
+      "id": "84862d7e-c58a-4be1-accb-b4cd910a82fa"
+    },
+    {
+      "title": "Strawberry Açaí",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20181217_StrawberryAcaiRefresher.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "Sweet strawberry flavors accented by passion fruit and açaí notes, shaken with ice and real strawberry pieces—a welcoming sweet spot of refreshment.",
+      "id": "bd889756-699a-4113-96b4-8484e1e52324"
+    },
+    {
+      "title": "Mango Dragonfruit",
+      "type": "Fruit Juice",
+      "price": 23.65,
+      "image": "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20221206_MangoDragonfruitRefreshers.jpg?impolicy=1by1_wide_topcrop_630",
+      "description": "A tropical-inspired pick-me-up—crafted with a refreshing combination of sweet mango and dragonfruit flavors and hand-shaken with ice plus a scoop of real diced dragonfruit.",
+      "id": "65a27cae-25ab-457b-811b-954cd51db2a4"
     }
   ],
   "special-items": [
@@ -78,9 +278,65 @@
       "title": "Croissant",
       "type": "Special Item",
       "price": 24,
-      "image": "https://images.pexels.com/photos/3892469/pexels-photo-3892469.jpeg?cs=srgb&dl=pexels-abdulrhman-alkady-3892469.jpg&fm=jpg",
+      "image": "https://www.freepnglogos.com/uploads/croissant-png/hq-croissant-image-transparent-3.png",
       "description": "A buttery, crescent-shaped French pastry. Good croissants are light, flaky, and delicately sweet. Enjoy one with a cup of coffee — preferably while sitting in a charming Parisian cafe",
       "id": "10382c1b-1e18-47b4-a639-7a3eb7b26fa7"
+    },
+    {
+      "title": "Breakfast Sandwich",
+      "type": "Special Item",
+      "price": 7.89,
+      "image": "https://www.jamba.com/-/media/jamba/menu/food/food_impossible_667x593.png?v=1&d=20210324T104459Z",
+      "description": "The Sandwich is Made from Plants combined with a cage-free fried egg and aged Cheddar cheese on an artisan sesame ciabatta bun",
+      "id": "ddcba6f0-100a-4106-b578-8cff9d372740"
+    },
+    {
+      "title": "Egg White & Roasted Red Pepper Egg Bites",
+      "type": "Special Item",
+      "price": 9.99,
+      "image": "https://www.wawa.com/getattachment/2ce6d20f-a405-4c84-8a1d-a995cd91b68d/Egg-Bites.png",
+      "description": "Cage-free egg whites combined with Monterey Jack cheese, spinach and fire-roasted red peppers and cooked using the French \"sous vide\" technique to create a velvety texture that's full of flavor.",
+      "id": "b8328087-8b95-41e7-bfdb-a46264771952"
+    },
+    {
+      "title": "Sausage, Cheddar & Egg Sandwich",
+      "type": "Special Item",
+      "price": 10.45,
+      "image": "https://aromajoes.com/wp-content/uploads/2021/01/Sausage-Cheddar-Buttermilk-Biscuit.png",
+      "description": "A  savory sausage patty, fluffy cage-free eggs and aged Cheddar cheese on a perfectly toasted English muffin.",
+      "id": "182fac9f-bcdd-4d06-9fa5-e3fca8ae9b5b"
+    },
+    {
+      "title": "Pretzel",
+      "type": "Special Item",
+      "price": 6.89,
+      "image": "https://live-aroma-joes-2020.imgix.net/wp-content/uploads/2021/01/Pretzel-Stuffed.png?q=85&fit=crop&crop=faces&auto=format&w=259",
+      "description": "A brittle, glazed-and-salted cracker of German or Alsatian origin. Made from a rope of dough typically fashioned into the shape of a loose knot, the pretzel is briefly boiled and then glazed with egg, salted, and baked.",
+      "id": "0b66bb13-f67a-4503-9e7d-1a428f97e50f"
+    },
+    {
+      "title": "Glazed Donut",
+      "type": "Special Item",
+      "price": 8.99,
+      "image": "https://live-aroma-joes-2020.imgix.net/wp-content/uploads/2021/01/Glazed-Donut.png?q=85&fit=crop&crop=faces&auto=format&w=259",
+      "description": "A glazed donut is a type of sweet pastry made from dough that is deep-fried until golden brown and then coated with a sugary glaze, resulting in a shiny and delicious treat.",
+      "id": "d09881bf-ab46-48aa-afe0-c380c41ce3a8"
+    },
+    {
+      "title": "Chocolate Muffin",
+      "type": "Special Item",
+      "price": 4.75,
+      "image": "https://live-aroma-joes-2020.imgix.net/wp-content/uploads/2021/01/Chocolate-Chip-Muffin.png?q=85&fit=crop&crop=faces&auto=format&w=259",
+      "description": "A muffin is a chemically-leavened, batter-based bakery product. It's formulation is somewhere in between a low-ratio cake and quick bread. ",
+      "id": "133c674e-ef32-474c-ba87-70bb5fae9ce2"
+    },
+    {
+      "title": "Bagel",
+      "type": "Special Item",
+      "price": 6.75,
+      "image": "https://live-aroma-joes-2020.imgix.net/wp-content/uploads/2021/01/Everything-Bagel-Sandwich.png?q=85&fit=crop&crop=faces&auto=format&w=259",
+      "description": "Bagel is a doughnut-shaped yeast-leavened roll that is characterized by a crisp, shiny crust and a dense interior. Crisp on the outside, chewy on the inside, slightly sweet, somewhat salty, undeniably pristine",
+      "id": "0cb9d940-c936-4749-b47e-a9aece5768d9"
     }
   ]
 }
