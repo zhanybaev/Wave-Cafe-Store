@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import { logIn, signUp } from "../utils/functions";
 import { useDispatch } from "react-redux";
-import { setError } from "../store/actions/auth.action";
 import { useAppSelector } from "../store";
 import { useNavigate } from "react-router-dom";
+import { setAuthError } from "../store/slices/authSlice";
+import { logIn, signUp } from "../store/actions/auth.action";
 
 const Auth = () => {
 	const [isLogin, setIslogin] = useState(true)
@@ -16,7 +16,7 @@ const Auth = () => {
 	const signupEmailRef = useRef<HTMLInputElement>(null)
 	const signupPasswordRef = useRef<HTMLInputElement>(null)
 	
-	const cleanErrors = ()=>setError(dispatch, '')
+	const cleanErrors = ()=>dispatch(setAuthError(''))
 
 	const handleCheckBox=()=>{
 		setIslogin(prev=>!prev)
@@ -29,14 +29,14 @@ const Auth = () => {
 				logIn(dispatch, loginEmailRef.current.value, loginPasswordRef.current.value, navigate)
 				return;
 			}
-			setError(dispatch, 'Please fill in all fields')
+			dispatch(setAuthError('Please fill in all fields'))
 			return;
 		}
 		if(signupEmailRef.current?.value && signupPasswordRef.current?.value){
 			signUp(dispatch, signupEmailRef.current.value, signupPasswordRef.current?.value, navigate)
 			return;
 		}
-		setError(dispatch, 'Please fill in all fields')
+		dispatch(setAuthError('Please fill in all fields'))
 		return;
 	}
 

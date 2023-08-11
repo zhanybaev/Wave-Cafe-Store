@@ -1,11 +1,11 @@
 import { useAppDispatch, useAppSelector } from '../store';
 import { IProduct } from '../types/productTypes';
-import { checkAdmin, deleteProduct } from '../utils/functions';
+import { checkAdmin } from '../utils/functions';
 import { DRINKS_API } from '../utils/consts';
 import CartButton from './CartButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { getOneProduct } from '../store/actions/product.action';
+import { deleteProduct, getOneProduct } from '../store/actions/product.action';
 
 interface CardProps{
     item: IProduct,

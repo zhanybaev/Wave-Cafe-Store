@@ -3,7 +3,7 @@ import { faAt, faCartShopping, faComments, faMartiniGlass, faMugHot, faMugSaucer
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "../store";
 import { useDispatch } from "react-redux";
-import { handleSignOut } from "../utils/functions";
+import { handleSignOut } from "../store/actions/auth.action";
 
 const Navbar = () => {
     const user = useAppSelector(state=>state.auth.user)

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
-import { addProduct, deleteProduct, editProduct } from '../utils/functions';
 import { DRINKS_API, SPECIAL_ITEMS_API } from '../utils/consts';
 import { IProduct } from '../types/productTypes';
 import SnackBar from './SnackBar';
 import Form from './Form';
+import { addProduct, deleteProduct, editProduct } from '../store/actions/product.action';
 
 interface IEditProps{
     closeModal():void

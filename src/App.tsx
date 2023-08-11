@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import MainRoutes from './Routes';
 import './styles/style.css';
-import { authListener } from './utils/functions';
 import { useDispatch } from 'react-redux';
+import { authListener } from './store/actions/auth.action';
 const background = require('./assets/background.mp4');
-
 
 function App() {
   const dispatch = useDispatch()
