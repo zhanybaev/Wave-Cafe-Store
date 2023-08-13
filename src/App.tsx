@@ -14,9 +14,9 @@ function App() {
   
   return (
     <div className="App">
-      <video id="background-video" autoPlay loop muted>
-        <source src={background} type="video/mp4"/>
-      </video>
+        <video id="background-video" muted playsInline onContextMenu={(e)=> e.preventDefault()} preload="auto" autoPlay loop>
+          <source src={background} type="video/mp4"/>
+        </video>
       <main>
         <MainRoutes/>
       </main>
