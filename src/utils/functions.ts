@@ -31,3 +31,7 @@ export function calcTotalPrice(products:ICartProduct[]) {
     });
     return totalPrice;
 }
+
+export const roundToHundredth = (value:number) => {
+    return Number(value.toFixed(2));
+  };

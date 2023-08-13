@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Edit from "./Edit";
+import Payment from "./Payment";
 const CloseIcon = require('../assets/icons/close-circle-svgrepo-com.svg')
 
 interface IModalProps{
     showModal:boolean
     setShowModal(showModal:boolean):void
+    role:string
 }
 
-const Modal = ({showModal, setShowModal}:IModalProps) => {
+const Modal = ({showModal, setShowModal, role}:IModalProps) => {
     const [visible, setVisible] = useState(true)
+
     const closeModal = () =>{
         setVisible(false)
         setTimeout(()=>{
@@ -26,7 +29,7 @@ const Modal = ({showModal, setShowModal}:IModalProps) => {
             className={`modal-background ${visible ? 'visible' : 'hidden'}`}
             style={{display: showModal ? 'block': 'none'}}> 
             <div className="modal">
-                <Edit closeModal={closeModal}/>
+                { role ==='edit' ? <Edit closeModal={closeModal}/> : role ==='payment' ? <Payment closeModal={closeModal}/> : null}
             </div>
             <button onClick={closeModal} className="closeModal">
                 <img src={CloseIcon.default} alt="close icon" />

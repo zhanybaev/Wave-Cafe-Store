@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ICartProduct } from '../types/cartTypes';
 import { changeProductCount, deleteProductFromCart } from '../store/actions/cart.action';
 import { useDispatch } from 'react-redux';
+import { roundToHundredth } from '../utils/functions';
 
 interface ICartProductProps{
     product:ICartProduct
@@ -10,6 +11,8 @@ interface ICartProductProps{
 
 const CartProduct = ({product}:ICartProductProps) => {
     const dispatch = useDispatch()
+
+    const roundedPrice = roundToHundredth(product.subPrice)
 
     const increaseCount = () =>{
         changeProductCount(dispatch, product.item.id, product.count+1)
@@ -32,7 +35,7 @@ const CartProduct = ({product}:ICartProductProps) => {
                         </div>
                     </div>
                     <p className="totalProductPrice">
-                        {product.subPrice}$
+                        {roundedPrice}$
                     </p>
                 </div>
                 <div className="product-control">

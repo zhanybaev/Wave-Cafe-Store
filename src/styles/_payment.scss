@@ -1,0 +1,87 @@
+.paymentForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 660px;
+    animation: fade-in 1s;
+    form{
+        padding: 40px 50px;
+        background: $transparent;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow-y: visible;
+        align-items: end;
+        div:nth-child(1), div:nth-child(3){
+            width: 60%;
+        } 
+        div:nth-child(2), div:nth-child(4){
+            width: 35%;
+        } 
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        input{
+            padding: 15px;
+            width: 100%;
+            font-size: 16.5px;
+            line-height: 24px;
+            font-weight: 400;
+            background: transparent;
+            color: #fff;
+            border: 0;
+            border-bottom: 1px solid white;
+        }
+        label, input::placeholder{
+            color: #fff;
+            font-size: 16.5px;
+        }
+        label{
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        button{
+            color: $green;
+            background: white;
+            padding: 12px 40px;
+            transition: all 0.3s ease;
+            font-size: 22.4px;
+            font-family: Arial;
+            border: 0;
+            margin-top: 30px;
+            float: right;
+            cursor: pointer;
+            max-width: 200px;
+        }
+        button:hover{
+            color: white;
+            background: $green;
+        }
+    }
+}
+
+@media screen and (max-width:790px) {
+    .paymentForm form{
+        padding: 10px;
+        padding-top: 20px;
+        div:nth-child(1), div:nth-child(3){
+            width: 55%;
+        } 
+        div:nth-child(2), div:nth-child(4){
+            width: 40%;
+        }
+    }
+}

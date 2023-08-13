@@ -28,7 +28,7 @@ const List = ({products, API}:IListProps) => {
             {
                 loading ? <Warning message='Loading...'/> : products.map(item=> <Card API={API} setShowModal={setShowModal} key={item.id} item={item}/>)
             }
-            <Modal setShowModal={setShowModal} showModal={showModal} />
+            <Modal role="edit" setShowModal={setShowModal} showModal={showModal} />
         </section >
     );
 };

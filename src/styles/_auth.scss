@@ -64,9 +64,6 @@
 	.text-center {
 		text-align: center !important;
 	}
-	.align-self-center {
-		align-self: center !important;
-	}
 	.pt-5 {
 		padding-top: 3rem !important;
 	}
@@ -173,7 +170,7 @@
 	  width: 36px;
 	  height: 36px;
 	  border-radius: 50%;
-	  color: white;
+	  color: transparent;
 	  background-color: $aqua;
 	  font-family: 'unicons';
 	  content: '\eb4f';
@@ -193,8 +190,6 @@
 	  position: relative;
 	  width: 100%;
 	  height: 350px;
-	  -webkit-transform-style: preserve-3d;
-	  transform-style: preserve-3d;
 	  perspective: 800px;
 	  margin-top: 20px;
 	}
@@ -270,7 +265,7 @@
 	}
 	.form-style:focus,
 	.form-style:active {
-	  border: none;
+	//   border: none;
 	  outline: none;
 	  box-shadow: 0 4px 8px 0 $green;
 	}
@@ -372,23 +367,6 @@
 	  background-color: $green;
 	  color: white;
 	  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
-	}
-	
-	
-	
-	
-	.logo {
-		position: absolute;
-		top: 30px;
-		right: 30px;
-		display: block;
-		z-index: 100;
-		transition: all 250ms linear;
-	}
-	.logo img {
-		height: 26px;
-		width: auto;
-		display: block;
 	}
 }
 

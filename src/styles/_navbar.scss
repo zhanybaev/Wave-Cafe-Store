@@ -61,6 +61,7 @@ nav .active, .nav__item:hover{
 @media screen and (max-width: 1130px){
     nav{
         flex-direction: column;
+        position: static;
     }
 }
 
@@ -68,11 +69,13 @@ nav .active, .nav__item:hover{
     nav{
         max-width: 380px;
     }
+    .nav__item{
+        width: 100%;
+    }
 }
-@media screen and (max-width: 992px){
+@media screen and (max-width: 993px){
     nav{
         flex-direction: row;
-        position: static;
     }
 }
 
