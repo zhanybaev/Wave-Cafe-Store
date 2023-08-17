@@ -1,7 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../store';
 import { IProduct } from '../types/productTypes';
 import { checkAdmin } from '../utils/functions';
-import { DRINKS_API } from '../utils/consts';
 import CartButton from './CartButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -41,7 +40,7 @@ const Card = ({item, setShowModal, API} :CardProps):JSX.Element => {
                         { admin
                             ? 
                                 <>
-                                    <button className="action-btn" onClick={()=>deleteProduct(item.id, DRINKS_API, dispatch)}>
+                                    <button className="action-btn" onClick={()=>deleteProduct(item.id, API, dispatch)}>
                                         <FontAwesomeIcon icon={faTrash} />
                                         <span>Delete</span>
                                     </button>

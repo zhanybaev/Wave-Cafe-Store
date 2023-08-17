@@ -380,8 +380,7 @@ nav .active, .nav__item:hover {
   max-width: 460px;
   padding: 40px 50px;
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+      align-self: flex-end;
 }
 
 .contact__form input, .contact__form textarea {
@@ -1083,7 +1082,7 @@ nav .active, .nav__item:hover {
   overflow-y: visible;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 
 .addForm form div, .editForm form div {
@@ -2048,7 +2047,7 @@ nav .active, .nav__item:hover {
 .pricing {
   background-color: rgba(0, 0, 0, 0.615);
   -ms-flex-item-align: end;
-      align-self: end;
+      align-self: flex-end;
   padding: 15px;
   width: 70%;
   display: -webkit-box;
@@ -2488,7 +2487,7 @@ nav .active, .nav__item:hover {
   overflow-y: visible;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 
 .paymentForm form div:nth-child(1), .paymentForm form div:nth-child(3) {
