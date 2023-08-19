@@ -147,11 +147,20 @@ header h1 {
   font-size: 25px;
 }
 
-nav .active, .nav__item:hover {
+nav .active {
   background: #099;
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media (hover: hover) {
+  .nav__item:hover {
+    background: #099;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
 }
 
 @media screen and (max-width: 1130px) {
@@ -434,9 +443,11 @@ nav .active, .nav__item:hover {
   cursor: pointer;
 }
 
-.contact__form button:hover {
-  color: white;
-  background: #099;
+@media (hover: hover) {
+  .contact__form button:hover {
+    color: white;
+    background: #099;
+  }
 }
 
 @font-face {
@@ -485,9 +496,11 @@ nav .active, .nav__item:hover {
   border-bottom: 4px solid transparent;
 }
 
-.filterBar li:hover {
-  color: #96FEFF;
-  border-bottom: 4px solid #96FEFF;
+@media (hover: hover) {
+  .filterBar li:hover {
+    color: #96FEFF;
+    border-bottom: 4px solid #96FEFF;
+  }
 }
 
 @media screen and (max-width: 495px) {
@@ -604,13 +617,15 @@ nav .active, .nav__item:hover {
   margin-left: 15px;
 }
 
-.action-btn:hover, .action-btn:focus {
-  -webkit-box-shadow: 0 0 0 1.1px #96FEFF;
-  box-shadow: 0 0 0 1.1px #96FEFF;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .action-btn:hover, .action-btn:focus {
+    -webkit-box-shadow: 0 0 0 1.1px #96FEFF;
+    box-shadow: 0 0 0 1.1px #96FEFF;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
 }
 
 .add-to-cart-button {
@@ -2108,8 +2123,10 @@ nav .active, .nav__item:hover {
   color: #5f6063;
 }
 
-.pricing__date .switch-field label:hover {
-  cursor: pointer;
+@media (hover: hover) {
+  .pricing__date .switch-field label:hover {
+    cursor: pointer;
+  }
 }
 
 .pricing__date .switch-field input:checked + label {
@@ -2264,9 +2281,11 @@ nav .active, .nav__item:hover {
   transition: .5s;
 }
 
-.pricing__action button:hover {
-  color: white;
-  background-color: #099;
+@media (hover: hover) {
+  .pricing__action button:hover {
+    color: white;
+    background-color: #099;
+  }
 }
 
 .cart__notification {
@@ -2573,9 +2592,11 @@ nav .active, .nav__item:hover {
   max-width: 200px;
 }
 
-.paymentForm form button:hover {
-  color: white;
-  background: #099;
+@media (hover: hover) {
+  .paymentForm form button:hover {
+    color: white;
+    background: #099;
+  }
 }
 
 @media screen and (max-width: 790px) {

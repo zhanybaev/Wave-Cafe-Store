@@ -66,9 +66,11 @@
             cursor: pointer;
             max-width: 200px;
         }
-        button:hover{
-            color: white;
-            background: $green;
+        @media (hover: hover) {
+            button:hover{
+                color: white;
+                background: $green;
+            }
         }
     }
 }

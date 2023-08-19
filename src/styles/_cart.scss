@@ -180,8 +180,10 @@
         color: #5f6063;
     }
     
-    .switch-field label:hover {
-        cursor: pointer;
+    @media (hover: hover) {
+        .switch-field label:hover {
+            cursor: pointer;
+        }
     }
     
     .switch-field input:checked + label {
@@ -284,9 +286,11 @@
         border: none;
         transition: .5s
     }
-    button:hover{
-        color: white;
-        background-color: $green;
+    @media (hover: hover) {
+        button:hover{
+            color: white;
+            background-color: $green;
+        }
     }
 }
 

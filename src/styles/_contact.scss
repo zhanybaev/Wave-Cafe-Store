@@ -61,8 +61,10 @@
         float: right;
         cursor: pointer;
     }
-    button:hover{
-        color: white;
-        background: $green;
+    @media (hover: hover) {
+        button:hover{
+            color: white;
+            background: $green;
+        }
     }
 }

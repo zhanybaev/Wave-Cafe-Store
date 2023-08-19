@@ -52,10 +52,18 @@ header h1{
     font-size: 25px;
 }
 
-nav .active, .nav__item:hover{
+nav .active{
     background: $green;
     color: white;
     transition: 0.5s;
+}
+
+@media (hover: hover) {
+    .nav__item:hover{
+        background: $green;
+        color: white;
+        transition: 0.5s;
+    }
 }
 
 @media screen and (max-width: 1130px){

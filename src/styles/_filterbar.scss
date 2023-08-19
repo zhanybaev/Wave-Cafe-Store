@@ -24,9 +24,11 @@
         padding-bottom: 5px;
         border-bottom: 4px solid transparent;
     }
-    li:hover{
-        color: #96FEFF;
-        border-bottom: 4px solid #96FEFF;
+    @media (hover: hover) {
+        li:hover{
+            color: #96FEFF;
+            border-bottom: 4px solid #96FEFF;
+        }
     }
 }
 
