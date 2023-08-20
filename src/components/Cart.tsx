@@ -77,7 +77,7 @@ const Cart = () => {
                         <div className="pricing__subtotal">
                             <div className="subtotal">
                                 <span>Subtotal</span>
-                                <span>${cartProducts.cart?.totalPrice}</span>
+                                <span>${roundToHundredth(cartProducts.cart?.totalPrice)}</span>
                             </div>
                             <div className="discount">
                                 <span>Discount</span>
